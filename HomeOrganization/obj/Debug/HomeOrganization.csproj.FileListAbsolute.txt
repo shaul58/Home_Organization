@@ -1,0 +1,6 @@
+C:\Users\SHAUL\Documents\Visual Studio 2013\Projects\Home Organization\HomeOrganization\HomeOrganization\bin\HomeOrganization.dll.config
+C:\Users\SHAUL\Documents\Visual Studio 2013\Projects\Home Organization\HomeOrganization\HomeOrganization\bin\HomeOrganization.dll
+C:\Users\SHAUL\Documents\Visual Studio 2013\Projects\Home Organization\HomeOrganization\HomeOrganization\bin\HomeOrganization.pdb
+C:\Users\SHAUL\Documents\Visual Studio 2013\Projects\Home Organization\HomeOrganization\HomeOrganization\obj\Debug\HomeOrganization.csprojResolveAssemblyReference.cache
+C:\Users\SHAUL\Documents\Visual Studio 2013\Projects\Home Organization\HomeOrganization\HomeOrganization\obj\Debug\HomeOrganization.dll
+C:\Users\SHAUL\Documents\Visual Studio 2013\Projects\Home Organization\HomeOrganization\HomeOrganization\obj\Debug\HomeOrganization.pdb
