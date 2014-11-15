@@ -66,6 +66,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="MainForm.aspx" />
+    <Content Include="messagesPage.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -75,6 +76,13 @@
     </Compile>
     <Compile Include="MainForm.aspx.designer.cs">
       <DependentUpon>MainForm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="messagesPage.aspx.cs">
+      <DependentUpon>messagesPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="messagesPage.aspx.designer.cs">
+      <DependentUpon>messagesPage.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
