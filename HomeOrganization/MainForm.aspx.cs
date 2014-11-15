@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using System.Windows;
 
 namespace HomeOrganization
 {
@@ -13,5 +14,13 @@ namespace HomeOrganization
         {
 
         }
+
+        protected void Button1_Click(object sender, EventArgs e)
+        {
+            Button1.Text = "avital HAVA";
+
+        }
     }
+    
+
 }
