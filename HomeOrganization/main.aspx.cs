@@ -18,7 +18,7 @@ namespace HomeOrganization
 
         protected void Button1_Click(object sender, EventArgs e)
         {
-            Button1.Text = "avital HAVA";
+            Button1.Text = "avital my love !";
             Thread.Sleep(3000);
             Response.Redirect("super.aspx");
             
