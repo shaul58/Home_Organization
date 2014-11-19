@@ -1,0 +1,13 @@
+﻿.text_3D{
+font-family: ABeeZee ;
+line-height: 1em;
+color: #b2540d; /* font color */
+font-size: 40px;
+text-shadow:0px 0px 0 rgb(190,93,153),1px 1px 0 rgb(180,83,143),2px 2px 0 rgb(170,73,133),3px 3px 0 rgb(160,63,123),4px 4px 0 rgb(150,53,113),5px 5px 0 rgb(140,43,103),6px 6px 0 rgb(130,33,93),7px 7px 0 rgb(120,23,83), 8px 8px 0 rgb(110,13,73),9px 9px 8px rgba(0,0,0,0.55),9px 9px 1px rgba(0,0,0,0.5),0px 0px 8px rgba(0,0,0,.2);}
+
+.col-xs-7{background-color:yellow; }
+.col-sm-6{background-color:orange;}
+.col-xs-12{background-color:blue;}
+.col-sm-4{background-color:green;}
+.col-sm-3{background-color:red;}
+.col-sm-9{background-color:purple;}

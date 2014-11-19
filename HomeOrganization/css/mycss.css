@@ -1,0 +1,49 @@
+body{
+	background-color:#033;
+	color:#FFF;
+	direction:rtl;
+	overflow-x:hidden;
+	}
+	
+.mycontainer {
+	padding-left: 10px;
+	padding-right: 10px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#products  div{
+	padding-top:50px;
+	padding-bottom:80px;
+	float:right;
+	text-align:center;
+}
+
+#products div  p{
+	width:50%;
+	margin:auto;
+	padding-top:10px;
+}
+
+.carousel-caption{
+	font-size:25px;
+	color:#FFF;
+}
+
+.navbar .btn{
+	margin-left:5px;
+	margin-top:15px;				
+}
+
+#information{
+	background-color:#3b3b3b;
+	padding-top:50px;
+	padding-bottom:50px;
+	border-top:1px solid gray;
+	border-bottom:3px solid gray;
+
+	}
+footer {
+	margin-left:40px;
+	padding-top:10px;
+	}
