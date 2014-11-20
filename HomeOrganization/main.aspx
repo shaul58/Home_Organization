@@ -18,6 +18,15 @@
 
             <!-- Latest compiled and minified JavaScript -->
         <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+    <script src="carouselSlide.js"></script>
+     <%--<script>
+             
+               $(document).ready(function() {
+                 $('.carousel').carousel({
+                   interval: 3500
+               })
+           });
+           </script>--%>
 </head>
 <body>
     <form id="form1" runat="server">
@@ -32,13 +41,15 @@
                            <span class="icon-bar"></span>
                              <span class="icon-bar"></span>
                            </button>
-                         <a class="navbar-brand" href="#">Home-Organization</a>
+                         <%--<asp:Label ID="LogInLabel" runat="server" Text="Home-Organization"></asp:Label>--%>
+                         <a class="navbar-brand" href="#"><asp:Label ID="navBarLogoLabel" runat="server" Text="Home-Organization"></asp:Label></a>
+                         <a class="navbar-brand" href="#"><asp:Label ID="Label1" runat="server" Text="ברוך הבא : אורח"></asp:Label></a>
                           </div>
                     <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse navbar-ex1-collapse ">
                    <ul class="nav navbar-nav navbar-right  "  id="menu_items">
                 <li class="active navbar-right"><a href="#">דף הבית</a></li>
-                 <li class="navbar-right"><a href="#">מי אנחנו</a></li>
+                 <li class="navbar-right"><a href="#">אודות</a></li>
                   <li class="navbar-right"> <a href="#">מוצרים</a></li>
                   <li class="navbar-right"><a href="#">צרו קשר</a></li>
                  <li  class="navbar-right">
@@ -61,10 +72,63 @@
              </div><!-- /.navbar-collapse -->
              
            </nav> <!-- End of Nav Bar    ------------------------>
-
-                      
-                  
             </nav>
+         <!-- My Carousel     -->   
+            <div id="carousel-example" class="carousel slide">
+               
+                   <!-- Indicators -->
+                 <ol class="carousel-indicators">
+                    <li data-target="#carousel-example" data-slide-to="0" class="active"></li>
+                   <li data-target="#carousel-example" data-slide-to="1"></li>
+                   <li data-target="#carousel-example" data-slide-to="2"></li>
+                 </ol>
+                 
+                   
+                  <!-- Wrapper for slides -->
+                <div class="carousel-inner" >
+                  
+                           <div class="item active">
+                                     <img id="imgSlide" src="gallery/img1.jpg" alt="IMG1" />
+                                    <div class="carousel-caption" >  סלייד ראשון .   <button  type="button" class="btn btn-primary  btn-sm ">לפרטים</button>  </div>
+                                  
+                          </div>
+                          
+                          <div class="item ">
+                                   <img src="gallery/img2.jpg" alt="IMG2" />
+                                    <div class="carousel-caption">  סלייד שני .   </div>
+                          </div>
+                  
+                          <div class="item ">
+                                   <img src="gallery/img3.jpg" alt="IMG3" />
+                                 <div class="carousel-caption">  סלייד שלישי ואחרון .   </div>
+                         </div>
+            
+                 </div>
+                  
+               
+           </div><!-- End of My Carousel     -->
+           <!-- My  Products     -->  
+             <section id="products" class="row">
+           
+                <div class="col-sm-4" >
+                      <h4>מוצר ראשון</h4>
+                      <img src="gallery/thmb1.jpg" alt="..." >
+                      <p>מה שאפשר לספר על המוצר הזה זה הרבה דברים. אולי למשל שהוא יודע לקפוץ, הוא גם יודע לבשל, ואולי גם לקרוא בשעות המאוחרות..</p>
+                       <br>
+                     <button  type="button" >המשך לקרוא..</button>
+                  </div>
+                      <div class="col-sm-4" >
+                      <h4>מוצר שני</h4>
+                      <img src="gallery/thmb1.jpg" alt="..." >
+                      <p>מה שאפשר לספר על המוצר הזה זה הרבה דברים. אולי למשל שהוא יודע לקפוץ, הוא גם יודע לבשל, ואולי גם לקרוא בשעות המאוחרות..</p>
+                       <br>
+                     <button  type="button" >המשך לקרוא..</button>
+                  </div>
+                  
+          </section><!--End of My  Products     -->
+
+
+
     </div>
          
     </form>

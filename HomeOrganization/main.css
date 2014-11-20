@@ -1,4 +1,8 @@
-﻿.text_3D{
+﻿body
+{
+    direction: rtl; 
+}
+.text_3D{
 font-family: ABeeZee ;
 line-height: 1em;
 color: #b2540d; /* font color */
@@ -11,3 +15,30 @@ text-shadow:0px 0px 0 rgb(190,93,153),1px 1px 0 rgb(180,83,143),2px 2px 0 rgb(17
 .col-sm-4{background-color:green;}
 .col-sm-3{background-color:red;}
 .col-sm-9{background-color:purple;}
+
+#RegisterButton
+{
+    background-color:blue
+}
+#LogInButton
+{
+    background-color:red
+}
+#navBarLogoLabel
+{
+    background-color:purple;
+    font-style:italic;
+    border:dotted;    
+}
+/*#imgSlide
+{
+    width:250px;
+    height:250px;
+}*/
+
+#carousel-example
+{ 
+
+    /*width:1000px;
+    height:500px;*/
+}
