@@ -110,20 +110,56 @@
            <!-- My  Products     -->  
              <section id="products" class="row">
            
-                <div class="col-sm-4" >
-                      <h4>מוצר ראשון</h4>
-                      <img src="gallery/thmb1.jpg" alt="..." >
-                      <p>מה שאפשר לספר על המוצר הזה זה הרבה דברים. אולי למשל שהוא יודע לקפוץ, הוא גם יודע לבשל, ואולי גם לקרוא בשעות המאוחרות..</p>
+                <div class="col-sm-4" id="img1">
+                      <h4></h4>
+                    <asp:ImageButton ID="ImageButton1" runat="server" ToolTip="קניות בסופר" ImageUrl="~/gallery/halel/IMG_1.JPG" Height="150px" Width="200px" ImageAlign="Middle" />
+                      <%--<img src="gallery/thmb1.jpg" alt="..." >--%>
+                      <p></p>
                        <br>
-                     <button  type="button" >המשך לקרוא..</button>
+                     <button  type="button" ></button>
                   </div>
-                      <div class="col-sm-4" >
-                      <h4>מוצר שני</h4>
-                      <img src="gallery/thmb1.jpg" alt="..." >
-                      <p>מה שאפשר לספר על המוצר הזה זה הרבה דברים. אולי למשל שהוא יודע לקפוץ, הוא גם יודע לבשל, ואולי גם לקרוא בשעות המאוחרות..</p>
+                      <div class="col-sm-3" id="img2" >
+                      <h4></h4>
+                      <asp:ImageButton ID="ImageButton2" runat="server" ToolTip="קניות בסופר" ImageUrl="~/gallery/halel/IMG_2.JPG" Height="150px" Width="200px" />
+                      <p></p>
                        <br>
-                     <button  type="button" >המשך לקרוא..</button>
+                     <button  type="button" ></button>
                   </div>
+
+                 <div class="col-sm-3" id="img3" >
+                      <h4></h4>
+                      <asp:ImageButton ID="ImageButton3" runat="server" ToolTip="קניות בסופר" ImageUrl="~/gallery/halel/IMG_3.JPG" Height="150px" Width="200px" />
+                      <p></p>
+                       <br>
+                     <button  type="button" ></button>
+                  </div>
+
+                 <div class="row">
+                     <div class="col-sm-4" id="img1">
+                      <h4></h4>
+                    <asp:ImageButton ID="ImageButton4" runat="server" ToolTip="קניות בסופר" ImageUrl="~/gallery/halel/IMG_4.JPG" Height="150px" Width="200px" ImageAlign="Middle" />
+                      <%--<img src="gallery/thmb1.jpg" alt="..." >--%>
+                      <p></p>
+                       <br>
+                     <button  type="button" ></button>
+                  </div>
+                      <div class="col-sm-3" id="img2" >
+                      <h4></h4>
+                      <asp:ImageButton ID="ImageButton5" runat="server" ToolTip="קניות בסופר" ImageUrl="~/gallery/halel/IMG_5.JPG" Height="150px" Width="200px" />
+                      <p></p>
+                       <br>
+                     <button  type="button" ></button>
+                  </div>
+
+                 <div class="col-sm-3" id="img3" >
+                      <h4></h4>
+                      <asp:ImageButton ID="ImageButton6" runat="server" ToolTip="קניות בסופר" ImageUrl="~/gallery/halel/IMG_6.JPG" Height="150px" Width="200px" />
+                      <p></p>
+                       <br>
+                     <button  type="button" ></button>
+                  </div>
+
+              </div>
                   
           </section><!--End of My  Products     -->
 

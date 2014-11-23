@@ -77,6 +77,12 @@
     <Content Include="css\mycss.css" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="gallery\additional.jpg" />
+    <Content Include="gallery\halel\IMG_1.JPG" />
+    <Content Include="gallery\halel\IMG_2.JPG" />
+    <Content Include="gallery\halel\IMG_3.JPG" />
+    <Content Include="gallery\halel\IMG_4.JPG" />
+    <Content Include="gallery\halel\IMG_5.JPG" />
+    <Content Include="gallery\halel\IMG_6.JPG" />
     <Content Include="gallery\img1.jpg" />
     <Content Include="gallery\img2.jpg" />
     <Content Include="gallery\img3.jpg" />
@@ -115,6 +121,9 @@
     <Compile Include="super.aspx.designer.cs">
       <DependentUpon>super.aspx</DependentUpon>
     </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Themes\Theme1\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
