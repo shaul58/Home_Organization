@@ -111,52 +111,52 @@
              <section id="products" class="row">
            
                 <div class="col-sm-4" id="img1">
-                      <h4></h4>
-                    <asp:ImageButton ID="ImageButton1" runat="server" ToolTip="קניות בסופר" ImageUrl="~/gallery/halel/IMG_1.JPG" Height="150px" Width="200px" ImageAlign="Middle" />
+                      <h4>קניות בסופר</h4>
+                    <asp:ImageButton ID="superImageButton" runat="server" ToolTip="לחץ לעמוד הקניות-" ImageUrl="~/gallery/products/קניות.JPG" Height="150px" Width="200px" ImageAlign="Middle" OnClick="superImageButton_Click" />
                       <%--<img src="gallery/thmb1.jpg" alt="..." >--%>
                       <p></p>
                        <br>
-                     <button  type="button" ></button>
+                     
                   </div>
                       <div class="col-sm-3" id="img2" >
-                      <h4></h4>
-                      <asp:ImageButton ID="ImageButton2" runat="server" ToolTip="קניות בסופר" ImageUrl="~/gallery/halel/IMG_2.JPG" Height="150px" Width="200px" />
+                      <h4>מטלות הבית</h4>
+                      <asp:ImageButton ID="ImageButton" runat="server" ToolTip="לחץ לעמוד מטלות הבית" ImageUrl="~/gallery/products/מטלות הבית_1.jpg" Height="150px" Width="200px" />
                       <p></p>
                        <br>
-                     <button  type="button" ></button>
+                     
                   </div>
 
                  <div class="col-sm-3" id="img3" >
-                      <h4></h4>
-                      <asp:ImageButton ID="ImageButton3" runat="server" ToolTip="קניות בסופר" ImageUrl="~/gallery/halel/IMG_3.JPG" Height="150px" Width="200px" />
+                      <h4>הודעות ועדכונים</h4>
+                      <asp:ImageButton ID="messagesImageButton" runat="server" ToolTip="לחץ לעמוד הודעות ועדכונים" ImageUrl="~/gallery/products/הודעות ועדכונים_1.jpg" Height="150px" Width="200px" />
                       <p></p>
                        <br>
                      <button  type="button" ></button>
                   </div>
 
                  <div class="row">
-                     <div class="col-sm-4" id="img1">
+                     <div class="col-sm-4" id="img4">
                       <h4></h4>
-                    <asp:ImageButton ID="ImageButton4" runat="server" ToolTip="קניות בסופר" ImageUrl="~/gallery/halel/IMG_4.JPG" Height="150px" Width="200px" ImageAlign="Middle" />
+                    <asp:ImageButton ID="ImageButton4" runat="server" ToolTip="img4" ImageUrl="~/gallery/products/איקון.jpg" Height="150px" Width="200px" ImageAlign="Middle" />
                       <%--<img src="gallery/thmb1.jpg" alt="..." >--%>
                       <p></p>
                        <br>
-                     <button  type="button" ></button>
+                    
                   </div>
-                      <div class="col-sm-3" id="img2" >
+                      <div class="col-sm-3" id="img5" >
                       <h4></h4>
-                      <asp:ImageButton ID="ImageButton5" runat="server" ToolTip="קניות בסופר" ImageUrl="~/gallery/halel/IMG_5.JPG" Height="150px" Width="200px" />
+                      <asp:ImageButton ID="ImageButton5" runat="server" ToolTip="img5" ImageUrl="~/gallery/products/איקון.jpg" Height="150px" Width="200px" />
                       <p></p>
                        <br>
-                     <button  type="button" ></button>
+                    
                   </div>
 
-                 <div class="col-sm-3" id="img3" >
+                 <div class="col-sm-3" id="img6" >
                       <h4></h4>
-                      <asp:ImageButton ID="ImageButton6" runat="server" ToolTip="קניות בסופר" ImageUrl="~/gallery/halel/IMG_6.JPG" Height="150px" Width="200px" />
+                      <asp:ImageButton ID="ImageButton6" runat="server" ToolTip="img6" ImageUrl="~/gallery/products/איקון.jpg" Height="150px" Width="200px" />
                       <p></p>
-                       <br>
-                     <button  type="button" ></button>
+                       <br />
+                    
                   </div>
 
               </div>

@@ -77,15 +77,18 @@
     <Content Include="css\mycss.css" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="gallery\additional.jpg" />
-    <Content Include="gallery\halel\IMG_1.JPG" />
-    <Content Include="gallery\halel\IMG_2.JPG" />
-    <Content Include="gallery\halel\IMG_3.JPG" />
-    <Content Include="gallery\halel\IMG_4.JPG" />
-    <Content Include="gallery\halel\IMG_5.JPG" />
-    <Content Include="gallery\halel\IMG_6.JPG" />
     <Content Include="gallery\img1.jpg" />
     <Content Include="gallery\img2.jpg" />
     <Content Include="gallery\img3.jpg" />
+    <Content Include="gallery\products\איקון.jpg" />
+    <Content Include="gallery\products\הודעות ועדכונים_1.jpg" />
+    <Content Include="gallery\products\הודעות ועדכונים_2.jpg" />
+    <Content Include="gallery\products\הודעות ועדכונים_3.jpg" />
+    <Content Include="gallery\products\הודעות ועדכונים_4.jpg" />
+    <Content Include="gallery\products\הודעות ועדכונים_5.jpg" />
+    <Content Include="gallery\products\מטלות הבית_1.jpg" />
+    <Content Include="gallery\products\מטלות הבית_2.jpg" />
+    <Content Include="gallery\products\קניות.JPG" />
     <Content Include="gallery\thmb1.jpg" />
     <Content Include="gallery\thmb2.jpg" />
     <Content Include="gallery\thmb3.jpg" />
@@ -95,7 +98,7 @@
     <Content Include="main.aspx" />
     <Content Include="main.css" />
     <Content Include="messagesPage.aspx" />
-    <Content Include="super.aspx" />
+    <Content Include="super_page.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -114,12 +117,12 @@
       <DependentUpon>messagesPage.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="super.aspx.cs">
-      <DependentUpon>super.aspx</DependentUpon>
+    <Compile Include="super_page.aspx.cs">
+      <DependentUpon>super_page.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="super.aspx.designer.cs">
-      <DependentUpon>super.aspx</DependentUpon>
+    <Compile Include="super_page.aspx.designer.cs">
+      <DependentUpon>super_page.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

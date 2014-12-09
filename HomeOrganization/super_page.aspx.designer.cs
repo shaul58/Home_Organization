@@ -10,7 +10,7 @@
 namespace HomeOrganization {
     
     
-    public partial class MainForm {
+    public partial class super_page {
         
         /// <summary>
         /// form1 control.
@@ -40,75 +40,39 @@ namespace HomeOrganization {
         protected global::System.Web.UI.WebControls.Label Label1;
         
         /// <summary>
-        /// RegisterButton control.
+        /// AddProductTextBox control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button RegisterButton;
+        protected global::System.Web.UI.WebControls.TextBox AddProductTextBox;
         
         /// <summary>
-        /// LogInButton control.
+        /// amountDropDownList control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button LogInButton;
+        protected global::System.Web.UI.WebControls.DropDownList amountDropDownList;
         
         /// <summary>
-        /// superImageButton control.
+        /// AddProductButton control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ImageButton superImageButton;
+        protected global::System.Web.UI.WebControls.Button AddProductButton;
         
         /// <summary>
-        /// ImageButton control.
+        /// CheckBoxList1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ImageButton ImageButton;
-        
-        /// <summary>
-        /// messagesImageButton control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.ImageButton messagesImageButton;
-        
-        /// <summary>
-        /// ImageButton4 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.ImageButton ImageButton4;
-        
-        /// <summary>
-        /// ImageButton5 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.ImageButton ImageButton5;
-        
-        /// <summary>
-        /// ImageButton6 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.ImageButton ImageButton6;
+        protected global::System.Web.UI.WebControls.CheckBoxList CheckBoxList1;
     }
 }

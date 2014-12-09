@@ -15,6 +15,11 @@ namespace HomeOrganization
         {
 
         }
+
+        protected void superImageButton_Click(object sender, ImageClickEventArgs e)
+        {
+            Response.Redirect("super_page.aspx");
+        }
     }
     
 
