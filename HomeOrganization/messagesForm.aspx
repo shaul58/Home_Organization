@@ -1,10 +1,10 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="super_page.aspx.cs" Inherits="HomeOrganization.super_page" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="messagesForm.aspx.cs" Inherits="HomeOrganization.messagesForm" %>
 
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title>super page</title>
+    <title>messagess page</title>
     <link href="main.css" rel="stylesheet" />
 
                 <!-- Jquery is requierd-->
@@ -57,7 +57,7 @@
                  </li>
                </ul>
                    <%-- <asp:Button class="btn btn-default navbar-btn  btn-inverse  navbar-left  btn-xs " ID="RegisterButton" runat="server" Text="הרשמה   " />
-               <%-- &nspb--%><%--                <asp:Button class="btn btn-default navbar-btn  btn-inverse  navbar-left  btn-xs " ID="LogInButton" runat="server" Text="התחברות" />--%><%--     <button type="button" class="btn btn-default navbar-btn  btn-inverse  navbar-left  btn-xs "  >הרשמה</button>
+               <%-- &nspb--%><%--                <asp:Button class="btn btn-default navbar-btn  btn-inverse  navbar-left  btn-xs " ID="LogInButton" runat="server" Text="התחברות" />--%>               <%--     <button type="button" class="btn btn-default navbar-btn  btn-inverse  navbar-left  btn-xs "  >הרשמה</button>
              <button type="button" class="btn btn-default navbar-btn  navbar-left btn-xs btn-primary"  >התחברות</button>--%>
              </div><!-- /.navbar-collapse -->
              
@@ -83,20 +83,12 @@
 
                 </div>
                 <div class="col-sm-4" id="col4">
-                    <asp:TextBox ID="ProductNameTextBox" runat="server" Height="23px" Width="167px" Text="חפש או כתוב מוצר להוספה" BackColor="#FFFF99" BorderStyle="Dotted" AutoCompleteType="Enabled" ForeColor="Maroon" ToolTip="חפש או כתוב מוצר להוספה"></asp:TextBox>
-                    <asp:DropDownList ID="QuntityDropDownList" runat="server" BackColor="#FFFF99" Height="50px" Width="50px">
-                        <asp:ListItem Value="headLine">כמות</asp:ListItem>
-                        <asp:ListItem>1</asp:ListItem>
-                        <asp:ListItem>2</asp:ListItem>
-                        <asp:ListItem>3</asp:ListItem>
-                        <asp:ListItem>4</asp:ListItem>
-                        <asp:ListItem>1 KG</asp:ListItem>
-                        <asp:ListItem>2 KG</asp:ListItem>
-                        <asp:ListItem>3 KG</asp:ListItem>
-                        <asp:ListItem>4 KG</asp:ListItem>
+                    <asp:TextBox ID="AddProductTextBox" runat="server" Height="23px" Width="167px" Text="כתוב הודעה חדשה" BackColor="#FFFF99" BorderStyle="Dotted" AutoCompleteType="Enabled" ForeColor="Red" TextMode="MultiLine"></asp:TextBox>
+                    <asp:DropDownList ID="amountDropDownList" runat="server" BackColor="#FFFF99" Height="40px" Width="65px" ToolTip="בחר את רמת הדחיפות ">
+                        <asp:ListItem>רגילה</asp:ListItem>
+                        <asp:ListItem>מיידית</asp:ListItem>
                     </asp:DropDownList>
-                    <asp:Button ID="AddProductButton" runat="server" Text="הוסף מוצר" Height="27px" Width="74px" BorderColor="#FFCCCC" BorderStyle="Solid" Font-Bold="True" Font-Size="Small" OnClick="AddProductButton_Click" ViewStateMode="Enabled" />
-                    <asp:Button ID="removeButton" runat="server" OnClick="removeButton_Click" Text="הסר" />
+                    <asp:Button ID="AddMessageButton" runat="server" Text="הוסף מוצר" Height="27px" Width="74px" BorderColor="#FFCCCC" BorderStyle="Solid" Font-Bold="True" Font-Size="Small" />
                 </div>
             
             </div>
@@ -108,12 +100,13 @@
                     
                 </div>
                 <div class="col-sm-4" id="col4">
-                    <asp:CheckBoxList ID="ShoppingListCheckBoxList" runat="server" BorderColor="#000066" BorderStyle="Dashed" ToolTip="סמן לביטול קנייה או אם קנית כבר" Width="280px" Font-Size="Medium" ForeColor="#000099">
-                        <asp:ListItem>item1</asp:ListItem>
-                        <asp:ListItem>item2</asp:ListItem>
-                        <asp:ListItem>item3</asp:ListItem>
+                    <asp:CheckBoxList ID="CheckBoxList1" runat="server" BorderColor="#000066" BorderStyle="Dashed" ToolTip="סמן לביטול קנייה" Width="280px">
+                    <asp:ListItem>item1-------------</asp:ListItem>
+                    <asp:ListItem>item2</asp:ListItem>
+                     <asp:ListItem>item3</asp:ListItem>
+                     <asp:ListItem>item4</asp:ListItem>
                     </asp:CheckBoxList>
-                    <%-- <asp:ListBox ID="ListBox1" runat="server">
+                   <%-- <asp:ListBox ID="ListBox1" runat="server">
                     <asp:ListItem>item1</asp:ListItem>
                     <asp:ListItem>item2</asp:ListItem>
                      <asp:ListItem>item3</asp:ListItem>

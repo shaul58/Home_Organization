@@ -128,7 +128,7 @@
 
                  <div class="col-sm-3" id="img3" >
                       <h4>הודעות ועדכונים</h4>
-                      <asp:ImageButton ID="messagesImageButton" runat="server" ToolTip="לחץ לעמוד הודעות ועדכונים" ImageUrl="~/gallery/products/הודעות ועדכונים_1.jpg" Height="150px" Width="200px" />
+                      <asp:ImageButton ID="messagesImageButton" runat="server" ToolTip="לחץ לעמוד הודעות ועדכונים" ImageUrl="~/gallery/products/הודעות ועדכונים_1.jpg" Height="150px" Width="200px" OnClick="messagesImageButton_Click" />
                       <p></p>
                        <br>
                      <button  type="button" ></button>

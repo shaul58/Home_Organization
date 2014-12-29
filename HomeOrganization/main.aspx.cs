@@ -20,6 +20,11 @@ namespace HomeOrganization
         {
             Response.Redirect("super_page.aspx");
         }
+
+        protected void messagesImageButton_Click(object sender, ImageClickEventArgs e)
+        {
+            Response.Redirect("messagesForm.aspx");
+        }
     }
     
 

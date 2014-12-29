@@ -10,7 +10,7 @@
 namespace HomeOrganization {
     
     
-    public partial class super_page {
+    public partial class messagesForm {
         
         /// <summary>
         /// form1 control.
@@ -40,48 +40,39 @@ namespace HomeOrganization {
         protected global::System.Web.UI.WebControls.Label Label1;
         
         /// <summary>
-        /// ProductNameTextBox control.
+        /// AddProductTextBox control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox ProductNameTextBox;
+        protected global::System.Web.UI.WebControls.TextBox AddProductTextBox;
         
         /// <summary>
-        /// QuntityDropDownList control.
+        /// amountDropDownList control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList QuntityDropDownList;
+        protected global::System.Web.UI.WebControls.DropDownList amountDropDownList;
         
         /// <summary>
-        /// AddProductButton control.
+        /// AddMessageButton control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button AddProductButton;
+        protected global::System.Web.UI.WebControls.Button AddMessageButton;
         
         /// <summary>
-        /// removeButton control.
+        /// CheckBoxList1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button removeButton;
-        
-        /// <summary>
-        /// ShoppingListCheckBoxList control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.CheckBoxList ShoppingListCheckBoxList;
+        protected global::System.Web.UI.WebControls.CheckBoxList CheckBoxList1;
     }
 }
