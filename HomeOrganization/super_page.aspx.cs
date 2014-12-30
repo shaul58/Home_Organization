@@ -21,13 +21,14 @@ namespace HomeOrganization
             ProductNameTextBox.Focus();
             ProductNameTextBox.Text = "";
             string UserID = Request.QueryString["UserId"];
-            FillSuperCheckBoxListItems(UserID);
+            FillSuperCheckBoxListItems(int.Parse(UserID));
 
         }
 
-        private void FillSuperCheckBoxListItems(string UserID)
+        private void FillSuperCheckBoxListItems(int UserID)
         {
-            
+            //int countOfProducts = db.GetCountOfProducts(UserID);
+            List<NewItem> Items = db.GetAllProductsFromUser(UserID);
         }
 
         
@@ -57,8 +58,7 @@ namespace HomeOrganization
 
         protected void removeButton_Click(object sender, EventArgs e)
         {
-            int num = int.Parse(QuntityDropDownList.Text.ToString());
-            ShoppingListCheckBoxList.Items.Remove(item1[num]);
+            
             
         }
     }
