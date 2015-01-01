@@ -18,7 +18,7 @@ namespace HomeOrganization
 
         protected void superImageButton_Click(object sender, ImageClickEventArgs e)
         {
-            Response.Redirect("super_page.aspx");
+            Response.Redirect("super_page.aspx?UserId=555");
         }
 
         protected void messagesImageButton_Click(object sender, ImageClickEventArgs e)

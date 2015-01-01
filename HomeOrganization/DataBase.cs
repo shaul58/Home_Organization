@@ -51,6 +51,7 @@ namespace HomeOrganization
             cmd = new SqlCommand(query, con);
             cmd.CommandType = CommandType.Text;
              int value =  int.Parse(cmd.ExecuteScalar().ToString());
+             con.Close();
              return value;
         }
 
@@ -61,6 +62,7 @@ namespace HomeOrganization
             cmd = new SqlCommand(query, con);
             cmd.CommandType = CommandType.Text;
             string text = cmd.ExecuteScalar().ToString();
+            con.Close();
             return text;
         }
 
@@ -71,6 +73,7 @@ namespace HomeOrganization
             cmd = new SqlCommand(query, con);
             cmd.CommandType = CommandType.Text;
             string quntity = cmd.ExecuteScalar().ToString();
+            con.Close();
             return quntity;
         }
 
@@ -82,25 +85,24 @@ namespace HomeOrganization
             productItem = new List<NewItem>();
 
             string query = "SELECT productId,productName,productQuntity from Super"
-            +"where Buy_1OrNotBuy_0=0" 
-            +"AND UserId="+UserID;
+            + " where Buy_1OrNotBuy_0=0 AND UserId=" + UserID;
             cmd = new SqlCommand(query, con);
             cmd.CommandType = CommandType.Text;
              dr = cmd.ExecuteReader();
-             int counter = 0;
+             //int counter = 0;
             while(dr.Read())
             {
-                pItem = new NewItem(UserID);
+                pItem = new NewItem(UserID, dr.GetInt32(0), dr.GetString(1), dr.GetInt32(2));
                 productItem.Add(pItem);
             }
-
+            con.Close();
             return productItem;
 
         }
 
         private int GetCountOfProducts(int UserID)
         {
-            con.Open();
+            
             // get only product with value 0 in Buy_1OrNotBuy_0 to show wanted products.
             string query = "SELECT COUNT(*) from Super where Buy_1OrNotBuy_0=0";
             cmd = new SqlCommand(query, con);

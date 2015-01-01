@@ -13,6 +13,7 @@ namespace HomeOrganization
         public int UserID { get; set; }
         public NewItem item;
         public ListItem[] item_;
+        public List<NewItem> Items;
         public bool Sucsess = false;
         
         protected void Page_Load(object sender, EventArgs e)
@@ -27,8 +28,9 @@ namespace HomeOrganization
 
         private void FillSuperCheckBoxListItems(int UserID)
         {
+            db = new DataBase();
             //int countOfProducts = db.GetCountOfProducts(UserID);
-            List<NewItem> Items = db.GetAllProductsFromUser(UserID);
+            Items = db.GetAllProductsFromUser(UserID);
         }
 
         
