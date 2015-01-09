@@ -11,11 +11,14 @@ namespace HomeOrganization
     {
         DataBase db;
         public int UserID { get; set; }
-        public NewItem item;
-        public ListItem[] item_;
-        public List<NewItem> Items;
+        //public NewItem item;
+        //public ListItem[] item_;
+        public List<ListItem> Items = new List<ListItem>();
+        //public ListItem newItem;
         public bool Sucsess = false;
-        
+
+        //public List<NewItem> Items = new List<NewItem>();
+
         protected void Page_Load(object sender, EventArgs e)
         {
             
@@ -31,6 +34,16 @@ namespace HomeOrganization
             db = new DataBase();
             //int countOfProducts = db.GetCountOfProducts(UserID);
             Items = db.GetAllProductsFromUser(UserID);
+        
+            for (int i = 0; i < Items.Count; i++)
+            {
+                
+                //newItem = new ListItem();
+                //newItem.Value = 
+                //string value =
+                ShoppingListCheckBoxList.Items.Add(Items[i]);
+            }
+
         }
 
         

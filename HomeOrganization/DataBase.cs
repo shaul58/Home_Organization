@@ -5,6 +5,7 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Web;
+using System.Web.UI.WebControls;
 
 namespace HomeOrganization
 {
@@ -18,7 +19,9 @@ namespace HomeOrganization
         NewItem pItem;
         List<string> Names;
         NewItem[] products;
-        List<NewItem> productItem;
+        //List<NewItem> productItem;
+        public ListItem newItem;
+        List<ListItem> ProductsItem = new List<ListItem>();
 
         public bool SuccessLogin { get; private set; }
 
@@ -77,12 +80,12 @@ namespace HomeOrganization
             return quntity;
         }
 
-        public List<NewItem> GetAllProductsFromUser(int UserID)
+        public List<ListItem> GetAllProductsFromUser(int UserID)
         {
             con.Open();
             int countOfProducts = GetCountOfProducts(UserID);
             //products = new NewItem[countOfProducts];
-            productItem = new List<NewItem>();
+            //ProducstItem = new List<ListItem>();
 
             string query = "SELECT productId,productName,productQuntity from Super"
             + " where Buy_1OrNotBuy_0=0 AND UserId=" + UserID;
@@ -90,13 +93,18 @@ namespace HomeOrganization
             cmd.CommandType = CommandType.Text;
              dr = cmd.ExecuteReader();
              //int counter = 0;
+            
             while(dr.Read())
             {
                 pItem = new NewItem(UserID, dr.GetInt32(0), dr.GetString(1), dr.GetInt32(2));
-                productItem.Add(pItem);
+                newItem = new ListItem();
+                newItem.Value = dr.GetInt32(0).ToString();
+                string newText = dr.GetString(1)+',' +"כמות:"+ dr.GetInt32(2).ToString();
+                newItem.Text = newText;
+                ProductsItem.Add(newItem);
             }
             con.Close();
-            return productItem;
+            return ProductsItem;
 
         }
 
