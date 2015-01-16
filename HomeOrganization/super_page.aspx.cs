@@ -73,8 +73,30 @@ namespace HomeOrganization
 
         protected void removeButton_Click(object sender, EventArgs e)
         {
-            
-            
+            for (int i = 0; i < ShoppingListCheckBoxList.Items.Count; i++)
+            {
+                if (ShoppingListCheckBoxList.Items[i].Selected)
+                    ShoppingListCheckBoxList.Items.Remove(Items[i]);
+            }
+           
+        }
+
+        protected void ShoppingListCheckBoxList_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string value = ShoppingListCheckBoxList.SelectedItem.Value;
+            //string Value = ShoppingListCheckBoxList.SelectedValue;
+            db = new DataBase();
+            //db.CheckBoxListSelectedIndexChanged(value);
+            for (int i = 0; i < ShoppingListCheckBoxList.Items.Count; i++)
+            {
+                if (ShoppingListCheckBoxList.Items[i].Selected)
+                {
+                    db.CheckBoxListSelectedIndexChanged(ShoppingListCheckBoxList.Items[i].Value);
+                    break;
+                }
+
+            }
+            Response.Redirect(Request.RawUrl);
         }
     }
 }

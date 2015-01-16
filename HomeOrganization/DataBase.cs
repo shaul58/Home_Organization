@@ -96,16 +96,16 @@ namespace HomeOrganization
             
             while(dr.Read())
             {
-                pItem = new NewItem(UserID, dr.GetInt32(0), dr.GetString(1), dr.GetInt32(2));
+                //pItem = new NewItem(UserID, dr.GetInt32(0), dr.GetString(1), dr.GetInt32(2));
                 newItem = new ListItem();
                 newItem.Value = dr.GetInt32(0).ToString();
-                string newText = dr.GetString(1)+',' +"כמות:"+ dr.GetInt32(2).ToString();
+                //string newText = dr.GetString(1)+',' +"כמות:"+ dr.GetInt32(2).ToString();
+                string newText = dr.GetString(1) + dr.GetInt32(2).ToString() + "X";
                 newItem.Text = newText;
                 ProductsItem.Add(newItem);
             }
             con.Close();
             return ProductsItem;
-
         }
 
         private int GetCountOfProducts(int UserID)
@@ -116,6 +116,27 @@ namespace HomeOrganization
             cmd = new SqlCommand(query, con);
             return int.Parse(cmd.ExecuteScalar().ToString());
 
+        }
+
+        public void CheckBoxListSelectedIndexChanged(string value)
+        {
+            con.Open();
+            int Value = int.Parse(value);
+            string query = "UPDATE Super set Buy_1OrNotBuy_0= 1 WHERE productId=" + Value;
+            cmd = new SqlCommand(query, con);
+            cmd.CommandType = CommandType.Text;
+            //cmd.Parameters.Add("@productID").Value = value;
+            //int Buy_1OrNotBuy_0 = int.Parse(cmd.ExecuteScalar().ToString());
+            //string query2 = "";
+            //cmd = new SqlCommand(query1, con);
+            //cmd.CommandType = CommandType.Text;
+            int affect = cmd.ExecuteNonQuery();
+            if(affect<1)
+            {
+                // Error is Occurred;
+                // where to put the Error;
+            }
+           
         }
     }
 }

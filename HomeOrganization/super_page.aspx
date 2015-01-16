@@ -108,7 +108,8 @@
                     
                 </div>
                 <div class="col-sm-4" id="col4">
-                    <asp:CheckBoxList ID="ShoppingListCheckBoxList" runat="server" BorderColor="#000066" BorderStyle="Dashed" ToolTip="סמן לביטול קנייה או אם קנית כבר" Width="280px" Font-Size="Medium" ForeColor="#000099">
+                    <asp:CheckBoxList ID="ShoppingListCheckBoxList" runat="server" BorderColor="#000066" BorderStyle="Dashed" ToolTip="סמן לביטול קנייה או אם קנית כבר" Width="280px" Font-Size="Medium" ForeColor="#000099" OnSelectedIndexChanged="ShoppingListCheckBoxList_SelectedIndexChanged" AutoPostBack="True" BackColor="#6666FF" Font-Overline="False" Font-Strikeout="False" Font-Underline="False">
+                        <asp:ListItem>Test</asp:ListItem>
                     </asp:CheckBoxList>
                     <%-- <asp:ListBox ID="ListBox1" runat="server">
                     <asp:ListItem>item1</asp:ListItem>
