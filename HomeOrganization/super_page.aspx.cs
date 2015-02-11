@@ -16,16 +16,25 @@ namespace HomeOrganization
         public List<ListItem> Items = new List<ListItem>();
         //public ListItem newItem;
         public bool Sucsess = false;
-
+        public int Urgency { get; set; }//1-Normal,2- Some urgent, 3- Immediate urgent
+        public bool SelectedUrgency { get; set; }
+        public string User_id { get; set; }
         //public List<NewItem> Items = new List<NewItem>();
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            
-            ProductNameTextBox.Focus();
-            ProductNameTextBox.Text = "";
-            string UserID = Request.QueryString["UserId"];
-            FillSuperCheckBoxListItems(int.Parse(UserID));
+            if (Page.IsPostBack)
+            { 
+                User_id = Request.QueryString["UserId"];
+                UserID = int.Parse(User_id);
+            }
+            else
+            {
+                ProductNameTextBox.Focus();
+                ProductNameTextBox.Text = "";
+                User_id = Request.QueryString["UserId"];
+                FillSuperCheckBoxListItems(int.Parse(User_id));
+            }
 
         }
 
@@ -37,10 +46,7 @@ namespace HomeOrganization
         
             for (int i = 0; i < Items.Count; i++)
             {
-                
-                //newItem = new ListItem();
-                //newItem.Value = 
-                //string value =
+                Items[0].Attributes.Add("style", "background-color:red"); //background-colour:red  
                 ShoppingListCheckBoxList.Items.Add(Items[i]);
             }
 
@@ -51,23 +57,19 @@ namespace HomeOrganization
         {
             //ListItem[] item1 = new ListItem[5];
             int UserId = UserID;
-             int productQuntity = int.Parse(QuntityDropDownList.Text);
+            string productQuntity = QuntityDropDownList.Text;
+            int Urgency  = int.Parse(UrgencyDropDownList.Text);
             db = new DataBase();
-            Sucsess= db.AddProductToShoppingList(UserID, ProductNameTextBox.Text,productQuntity);
-             
+            Sucsess = db.AddProductToShoppingList(UserID, ProductNameTextBox.Text, productQuntity, Urgency);
+            if (Sucsess)
+                Response.Redirect(Request.RawUrl);
+            else
+            {
+                //write error message ;  
+            }
            
 
-             //for (int i = 0; i < 5; i++)
-             //{
-
-             //    //item1[i] = new ListItem(item+i.ToString(), item+i.ToString());
-             //    //item1[0].Value = "item_0";
-             //    //item1[i].Value = "item_"+i.ToString();
-             //    //item1[i].Text = "newItem_"+i.ToString();
-
-             //    ShoppingListCheckBoxList.Items.Add(item1[i]);
-             //    AddProductTextBox.Text = item1[i].Value;
-             //}
+           
              
         }
 
@@ -98,5 +100,14 @@ namespace HomeOrganization
             }
             Response.Redirect(Request.RawUrl);
         }
+
+        protected void UrgencyDropDownList_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            SelectedUrgency = true;
+            Urgency = int.Parse(UrgencyDropDownList.SelectedItem.Value);
+
+        }
+
+        
     }
 }

@@ -84,7 +84,7 @@
                 </div>
                 <div class="col-sm-4" id="col4">
                     <asp:TextBox ID="ProductNameTextBox" runat="server" Height="23px" Width="167px" Text="חפש או כתוב מוצר להוספה" BackColor="#FFFF99" BorderStyle="Dotted" AutoCompleteType="Enabled" ForeColor="Maroon" ToolTip="חפש או כתוב מוצר להוספה"></asp:TextBox>
-                    <asp:DropDownList ID="QuntityDropDownList" runat="server" BackColor="#FFFF99" Height="50px" Width="50px">
+                    <asp:DropDownList ID="QuntityDropDownList" runat="server" BackColor="#FFFF99" Height="50px" Width="60px">
                         <asp:ListItem Value="headLine">כמות</asp:ListItem>
                         <asp:ListItem>1</asp:ListItem>
                         <asp:ListItem>2</asp:ListItem>
@@ -94,6 +94,11 @@
                         <asp:ListItem>2 KG</asp:ListItem>
                         <asp:ListItem>3 KG</asp:ListItem>
                         <asp:ListItem>4 KG</asp:ListItem>
+                    </asp:DropDownList>
+                    <asp:DropDownList ID="UrgencyDropDownList" runat="server" Height="50px" ToolTip="בחר את רמת הדחיפות לקנייה" Width="60px" OnSelectedIndexChanged="UrgencyDropDownList_SelectedIndexChanged">
+                        <asp:ListItem>דחיפות</asp:ListItem>
+                        <asp:ListItem Value="1">רגילה</asp:ListItem>
+                        <asp:ListItem Value="2">מידי</asp:ListItem>
                     </asp:DropDownList>
                     <asp:Button ID="AddProductButton" runat="server" Text="הוסף מוצר" Height="27px" Width="74px" BorderColor="#FFCCCC" BorderStyle="Solid" Font-Bold="True" Font-Size="Small" OnClick="AddProductButton_Click" ViewStateMode="Enabled" />
                     <asp:Button ID="removeButton" runat="server" OnClick="removeButton_Click" Text="הסר" />
@@ -108,8 +113,7 @@
                     
                 </div>
                 <div class="col-sm-4" id="col4">
-                    <asp:CheckBoxList ID="ShoppingListCheckBoxList" runat="server" BorderColor="#000066" BorderStyle="Dashed" ToolTip="סמן לביטול קנייה או אם קנית כבר" Width="280px" Font-Size="Medium" ForeColor="#000099" OnSelectedIndexChanged="ShoppingListCheckBoxList_SelectedIndexChanged" AutoPostBack="True" BackColor="#6666FF" Font-Overline="False" Font-Strikeout="False" Font-Underline="False">
-                        <asp:ListItem>Test</asp:ListItem>
+                    <asp:CheckBoxList ID="ShoppingListCheckBoxList" runat="server" BorderColor="#3333FF" BorderStyle="Dashed" ToolTip="סמן לביטול קנייה או אם קנית כבר" Width="280px" Font-Size="Medium" ForeColor="Black" OnSelectedIndexChanged="ShoppingListCheckBoxList_SelectedIndexChanged" AutoPostBack="True" BackColor="#FFFFCC" Font-Overline="False" Font-Strikeout="False" Font-Underline="False">
                     </asp:CheckBoxList>
                     <%-- <asp:ListBox ID="ListBox1" runat="server">
                     <asp:ListItem>item1</asp:ListItem>

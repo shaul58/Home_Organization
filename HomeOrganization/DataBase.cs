@@ -22,17 +22,18 @@ namespace HomeOrganization
         //List<NewItem> productItem;
         public ListItem newItem;
         List<ListItem> ProductsItem = new List<ListItem>();
+        
 
         public bool SuccessLogin { get; private set; }
 
 
-        public bool AddProductToShoppingList(int UserId,string pName, int pQuntity)
+        public bool AddProductToShoppingList(int UserId, string pName, string pQuntity, int Urgency)
         {
             
             con.Open();
-            string Query = "INSERT INTO SuperTable(UserId,ProductName,ProductQuntity,Buy_1OrNotBuy_0)"
-            + " VALUES(" + "," + UserId + "',N'" + pName + ","
-                             + pQuntity + "," + 0 + ")";
+            string Query = "INSERT INTO Super (UserId,ProductName,ProductQuntity,Buy_1OrNotBuy_0,urgencyLevel)"
+            + " VALUES(" + UserId + ",N'"+ pName + "','"
+                             + pQuntity + "'," + 0 +","+Urgency + ")";
             cmd = new SqlCommand(Query, con);
             cmd.CommandType = CommandType.Text;
 
@@ -100,8 +101,11 @@ namespace HomeOrganization
                 newItem = new ListItem();
                 newItem.Value = dr.GetInt32(0).ToString();
                 //string newText = dr.GetString(1)+',' +"כמות:"+ dr.GetInt32(2).ToString();
-                string newText = dr.GetString(1) + dr.GetInt32(2).ToString() + "X";
+                string newText = dr.GetString(1) + " , כמות: " + dr.GetString(2).ToString();
                 newItem.Text = newText;
+                
+                //if(newItem.Value == "1")
+                    newItem.Attributes.Add("style", "color: green; font-weight: bold; font-style: strikeout");
                 ProductsItem.Add(newItem);
             }
             con.Close();
@@ -137,6 +141,24 @@ namespace HomeOrganization
                 // where to put the Error;
             }
            
+        }
+
+
+
+        public bool selectedUrgencyLEvel(string p)
+        {
+            con.Open();
+            string Query = ""; 
+            cmd = new SqlCommand(Query, con);
+            cmd.CommandType = CommandType.Text;
+            int affectedRows = cmd.ExecuteNonQuery();
+            con.Close();
+
+            if (affectedRows > 0)
+                return true;
+            else
+                return false;
+
         }
     }
 }
