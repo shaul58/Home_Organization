@@ -46,7 +46,7 @@ namespace HomeOrganization
         
             for (int i = 0; i < Items.Count; i++)
             {
-                Items[0].Attributes.Add("style", "background-color:red"); //background-colour:red  
+                //Items[0].Attributes.Add("style", "background-color:red"); //background-colour:red  
                 ShoppingListCheckBoxList.Items.Add(Items[i]);
             }
 

@@ -113,7 +113,7 @@
                     
                 </div>
                 <div class="col-sm-4" id="col4">
-                    <asp:CheckBoxList ID="ShoppingListCheckBoxList" runat="server" BorderColor="#3333FF" BorderStyle="Dashed" ToolTip="סמן לביטול קנייה או אם קנית כבר" Width="280px" Font-Size="Medium" ForeColor="Black" OnSelectedIndexChanged="ShoppingListCheckBoxList_SelectedIndexChanged" AutoPostBack="True" BackColor="#FFFFCC" Font-Overline="False" Font-Strikeout="False" Font-Underline="False">
+                    <asp:CheckBoxList ID="ShoppingListCheckBoxList" runat="server" BorderColor="#3333FF" BorderStyle="Dashed" ToolTip="סמן לביטול קנייה או אם קנית כבר" Width="280px" Font-Size="Medium" ForeColor="#003300" OnSelectedIndexChanged="ShoppingListCheckBoxList_SelectedIndexChanged" AutoPostBack="True" BackColor="#FFFFCC" Font-Overline="False" Font-Strikeout="False" Font-Underline="False">
                     </asp:CheckBoxList>
                     <%-- <asp:ListBox ID="ListBox1" runat="server">
                     <asp:ListItem>item1</asp:ListItem>

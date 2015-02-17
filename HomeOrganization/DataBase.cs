@@ -103,9 +103,9 @@ namespace HomeOrganization
                 //string newText = dr.GetString(1)+',' +"כמות:"+ dr.GetInt32(2).ToString();
                 string newText = dr.GetString(1) + " , כמות: " + dr.GetString(2).ToString();
                 newItem.Text = newText;
-                
-                //if(newItem.Value == "1")
-                    newItem.Attributes.Add("style", "color: green; font-weight: bold; font-style: strikeout");
+                int urgencyLevel = dr.GetInt32(3);
+                if (urgencyLevel == 2)
+                    newItem.Attributes.Add("style", "background-color:red");
                 ProductsItem.Add(newItem);
             }
             con.Close();
