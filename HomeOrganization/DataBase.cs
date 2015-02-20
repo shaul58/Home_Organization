@@ -88,7 +88,7 @@ namespace HomeOrganization
             //products = new NewItem[countOfProducts];
             //ProducstItem = new List<ListItem>();
 
-            string query = "SELECT productId,productName,productQuntity from Super"
+            string query = "SELECT productId,productName,productQuntity, urgencyLevel from Super"
             + " where Buy_1OrNotBuy_0=0 AND UserId=" + UserID;
             cmd = new SqlCommand(query, con);
             cmd.CommandType = CommandType.Text;

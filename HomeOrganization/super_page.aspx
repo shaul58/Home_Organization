@@ -101,7 +101,6 @@
                         <asp:ListItem Value="2">מידי</asp:ListItem>
                     </asp:DropDownList>
                     <asp:Button ID="AddProductButton" runat="server" Text="הוסף מוצר" Height="27px" Width="74px" BorderColor="#FFCCCC" BorderStyle="Solid" Font-Bold="True" Font-Size="Small" OnClick="AddProductButton_Click" ViewStateMode="Enabled" />
-                    <asp:Button ID="removeButton" runat="server" OnClick="removeButton_Click" Text="הסר" />
                 </div>
             
             </div>
@@ -113,7 +112,7 @@
                     
                 </div>
                 <div class="col-sm-4" id="col4">
-                    <asp:CheckBoxList ID="ShoppingListCheckBoxList" runat="server" BorderColor="#3333FF" BorderStyle="Dashed" ToolTip="סמן לביטול קנייה או אם קנית כבר" Width="280px" Font-Size="Medium" ForeColor="#003300" OnSelectedIndexChanged="ShoppingListCheckBoxList_SelectedIndexChanged" AutoPostBack="True" BackColor="#FFFFCC" Font-Overline="False" Font-Strikeout="False" Font-Underline="False">
+                    <asp:CheckBoxList ID="ShoppingListCheckBoxList" runat="server" BorderColor="#3333FF" BorderStyle="Dashed" ToolTip="סמן לביטול קנייה או אם קנית כבר" Width="280px" Font-Size="Large" ForeColor="#003300" OnSelectedIndexChanged="ShoppingListCheckBoxList_SelectedIndexChanged" AutoPostBack="True" BackColor="#FFFFCC" Font-Overline="False" Font-Strikeout="False" Font-Underline="False" CellPadding="1" CellSpacing="1">
                     </asp:CheckBoxList>
                     <%-- <asp:ListBox ID="ListBox1" runat="server">
                     <asp:ListItem>item1</asp:ListItem>
