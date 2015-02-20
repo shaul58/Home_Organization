@@ -112,7 +112,7 @@
            
                 <div class="col-sm-4" id="img1">
                       <h4>קניות בסופר</h4>
-                    <asp:ImageButton ID="superImageButton" runat="server" ToolTip="לחץ לעמוד הקניות-" ImageUrl="~/gallery/products/קניות.JPG" Height="150px" Width="200px" ImageAlign="Middle" OnClick="superImageButton_Click" />
+                    <asp:ImageButton ID="superImageButton" runat="server" ToolTip="לחץ לעמוד הקניות-" ImageUrl="~/gallery/products/ShoppingList.JPG" Height="150px" Width="200px" ImageAlign="Middle" OnClick="superImageButton_Click" />
                       <%--<img src="gallery/thmb1.jpg" alt="..." >--%>
                       <p></p>
                        <br>
@@ -120,7 +120,7 @@
                   </div>
                       <div class="col-sm-3" id="img2" >
                       <h4>מטלות הבית</h4>
-                      <asp:ImageButton ID="ImageButton" runat="server" ToolTip="לחץ לעמוד מטלות הבית" ImageUrl="~/gallery/products/מטלות הבית_1.jpg" Height="150px" Width="200px" />
+                      <asp:ImageButton ID="ImageButton" runat="server" ToolTip="לחץ לעמוד מטלות הבית" ImageUrl="~/gallery/products/HomeTasks_1.jpg" Height="150px" Width="200px" />
                       <p></p>
                        <br>
                      
@@ -128,7 +128,7 @@
 
                  <div class="col-sm-3" id="img3" >
                       <h4>הודעות ועדכונים</h4>
-                      <asp:ImageButton ID="messagesImageButton" runat="server" ToolTip="לחץ לעמוד הודעות ועדכונים" ImageUrl="~/gallery/products/הודעות ועדכונים_1.jpg" Height="150px" Width="200px" OnClick="messagesImageButton_Click" />
+                      <asp:ImageButton ID="messagesImageButton" runat="server" ToolTip="לחץ לעמוד הודעות ועדכונים" ImageUrl="~/gallery/products/MessagesAndUpdates_1.jpg" Height="150px" Width="200px" OnClick="messagesImageButton_Click" />
                       <p></p>
                        <br>
                      <button  type="button" ></button>
