@@ -64,12 +64,22 @@
                      
                  </li>
                </ul>
-                <asp:Button class="btn btn-default navbar-btn  btn-inverse  navbar-left  btn-xs " ID="RegisterButton" runat="server" Text="הרשמה   " />
-               <%-- &nspb--%>
-                <asp:Button class="btn btn-default navbar-btn  btn-inverse  navbar-left  btn-xs " ID="LogInButton" runat="server" Text="התחברות" />
+                <%--<asp:Button class="btn btn-default navbar-btn  btn-inverse  navbar-left  btn-xs " ID="RegisterButton" runat="server" Text="הרשמה   " />--%>
+                
+                <%--<asp:Button class="btn btn-default navbar-btn  btn-inverse  navbar-left  btn-xs " ID="LogInButton" runat="server" Text="התחבר" />--%>
                <%--     <button type="button" class="btn btn-default navbar-btn  btn-inverse  navbar-left  btn-xs "  >הרשמה</button>
              <button type="button" class="btn btn-default navbar-btn  navbar-left btn-xs btn-primary"  >התחברות</button>--%>
              </div><!-- /.navbar-collapse -->
+            <div dir="ltr">
+                  <%--&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp&nbsp--%>
+                <asp:Button ID="registerButton" runat="server" Height="25px" Width="70px" Text="הרשם" BackColor="#FF6600" BorderColor="#000099" BorderStyle="Inset" />
+                <asp:Button ID="logInButton" runat="server" Height="25px" Width="70px" Text="התחבר" BorderStyle="Groove" BorderColor="#0000CC" Font-Bold="True" BackColor="#FF5050" />
+                <asp:TextBox ID="TextBox2" runat="server" Height="25px" Width="70px">ססמה</asp:TextBox>
+                <asp:TextBox ID="TextBox1" runat="server" Height="25px" Width="70px">שם משתמש</asp:TextBox>
+                
+                <asp:Label ID="Label2" runat="server" Text="LogIN:" BackColor="#FF0066"></asp:Label>
+
+            </div>
              
            </nav> <!-- End of Nav Bar    ------------------------>
             </nav>
@@ -137,7 +147,7 @@
                  <div class="row">
                      <div class="col-sm-4" id="img4">
                       <h4></h4>
-                    <asp:ImageButton ID="ImageButton4" runat="server" ToolTip="img4" ImageUrl="~/gallery/products/איקון.jpg" Height="150px" Width="200px" ImageAlign="Middle" />
+                    <asp:ImageButton ID="ImageButton4" runat="server" ToolTip="img4" ImageUrl="~/gallery/products/Icone.jpg" Height="150px" Width="200px" ImageAlign="Middle" />
                       <%--<img src="gallery/thmb1.jpg" alt="..." >--%>
                       <p></p>
                        <br>
@@ -145,7 +155,7 @@
                   </div>
                       <div class="col-sm-3" id="img5" >
                       <h4></h4>
-                      <asp:ImageButton ID="ImageButton5" runat="server" ToolTip="img5" ImageUrl="~/gallery/products/איקון.jpg" Height="150px" Width="200px" />
+                      <asp:ImageButton ID="ImageButton5" runat="server" ToolTip="img5" ImageUrl="~/gallery/products/Icone.jpg" Height="150px" Width="200px" />
                       <p></p>
                        <br>
                     
@@ -153,7 +163,7 @@
 
                  <div class="col-sm-3" id="img6" >
                       <h4></h4>
-                      <asp:ImageButton ID="ImageButton6" runat="server" ToolTip="img6" ImageUrl="~/gallery/products/איקון.jpg" Height="150px" Width="200px" />
+                      <asp:ImageButton ID="ImageButton6" runat="server" ToolTip="img6" ImageUrl="~/gallery/products/Icone.jpg" Height="150px" Width="200px" />
                       <p></p>
                        <br />
                     

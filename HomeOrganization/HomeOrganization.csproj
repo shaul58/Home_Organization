@@ -80,7 +80,7 @@
     <Content Include="gallery\img1.jpg" />
     <Content Include="gallery\img2.jpg" />
     <Content Include="gallery\img3.jpg" />
-    <Content Include="gallery\products\איקון.jpg" />
+    <Content Include="gallery\products\Icone.jpg" />
     <Content Include="gallery\products\MessagesAndUpdates_1.jpg" />
     <Content Include="gallery\products\הודעות ועדכונים_2.jpg" />
     <Content Include="gallery\products\הודעות ועדכונים_3.jpg" />
@@ -95,11 +95,13 @@
     <Content Include="js\bootstrap.js" />
     <Content Include="js\bootstrap.min.js" />
     <Content Include="js\carousel.js" />
+    <Content Include="LogInCss.css" />
     <Content Include="main.aspx" />
     <Content Include="main.css" />
     <Content Include="messagesForm.aspx" />
     <Content Include="messagesPage.aspx" />
     <Content Include="super_page.aspx" />
+    <Content Include="UserLogIn.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -133,6 +135,13 @@
     </Compile>
     <Compile Include="super_page.aspx.designer.cs">
       <DependentUpon>super_page.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserLogIn.aspx.cs">
+      <DependentUpon>UserLogIn.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserLogIn.aspx.designer.cs">
+      <DependentUpon>UserLogIn.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
