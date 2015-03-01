@@ -27,12 +27,12 @@ namespace HomeOrganization
         public bool SuccessLogin { get; private set; }
 
 
-        public bool AddProductToShoppingList(int UserId, string pName, string pQuntity, int Urgency)
+        public bool AddProductToShoppingList(string UserName, string pName, string pQuntity, int Urgency)
         {
             
             con.Open();
-            string Query = "INSERT INTO Super (UserId,ProductName,ProductQuntity,Buy_1OrNotBuy_0,urgencyLevel)"
-            + " VALUES(" + UserId + ",N'"+ pName + "','"
+            string Query = "INSERT INTO Super (UserName,ProductName,ProductQuntity,Buy_1OrNotBuy_0,urgencyLevel)"
+            + " VALUES('" + UserName + "',N'" + pName + "','"
                              + pQuntity + "'," + 0 +","+Urgency + ")";
             cmd = new SqlCommand(Query, con);
             cmd.CommandType = CommandType.Text;
@@ -81,15 +81,15 @@ namespace HomeOrganization
             return quntity;
         }
 
-        public List<ListItem> GetAllProductsFromUser(int UserID)
+        public List<ListItem> GetAllProductsFromUser(string UserName)
         {
             con.Open();
-            int countOfProducts = GetCountOfProducts(UserID);
+            //int countOfProducts = GetCountOfProducts(UserID);
             //products = new NewItem[countOfProducts];
             //ProducstItem = new List<ListItem>();
 
             string query = "SELECT productId,productName,productQuntity, urgencyLevel from Super"
-            + " where Buy_1OrNotBuy_0=0 AND UserId=" + UserID;
+            + " where Buy_1OrNotBuy_0=0 AND UserName='" + UserName+"'";
             cmd = new SqlCommand(query, con);
             cmd.CommandType = CommandType.Text;
              dr = cmd.ExecuteReader();
@@ -134,8 +134,9 @@ namespace HomeOrganization
             //string query2 = "";
             //cmd = new SqlCommand(query1, con);
             //cmd.CommandType = CommandType.Text;
-            int affect = cmd.ExecuteNonQuery();
-            if(affect<1)
+            int affectedRows = 0;
+            affectedRows = cmd.ExecuteNonQuery();
+            if (affectedRows < 1)
             {
                 // Error is Occurred;
                 // where to put the Error;
@@ -159,6 +160,19 @@ namespace HomeOrganization
             else
                 return false;
 
+        }
+
+        public string LoginUser(string userName, string UserPassword)
+        {
+            con.Open();
+            string Query = "SELECT AcounrUserName FROM Users"
+            +" WHERE AcounrUserName='"+ userName +"' AND AcountPassword= '"+UserPassword+"'";
+            cmd = new SqlCommand(Query, con);
+            cmd.CommandType = CommandType.Text;
+            string UserName = cmd.ExecuteScalar().ToString();
+
+            return UserName;
+            
         }
     }
 }

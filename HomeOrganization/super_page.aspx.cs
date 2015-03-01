@@ -10,7 +10,7 @@ namespace HomeOrganization
     public partial class super_page : System.Web.UI.Page
     {
         DataBase db;
-        public int UserID { get; set; }
+        //public int UserID { get; set; }
         //public NewItem item;
         //public ListItem[] item_;
         public List<ListItem> Items = new List<ListItem>();
@@ -18,31 +18,41 @@ namespace HomeOrganization
         public bool Sucsess = false;
         public int Urgency { get; set; }//1-Normal,2- Some urgent, 3- Immediate urgent
         public bool SelectedUrgency { get; set; }
-        public string User_id { get; set; }
+        public string UserName { get; set; }
         //public List<NewItem> Items = new List<NewItem>();
 
         protected void Page_Load(object sender, EventArgs e)
         {
+            UserName = Request.QueryString["UserName"];
+            if (UserName != null)
+            {
+                logInUserLabel.Text = "ברוך הבא : " + UserName;
+            }
             if (Page.IsPostBack)
             { 
-                User_id = Request.QueryString["UserId"];
-                UserID = int.Parse(User_id);
+                //User_id = Request.QueryString["UserId"];
+                //UserID = int.Parse(User_id);
             }
             else
             {
                 ProductNameTextBox.Focus();
                 ProductNameTextBox.Text = "";
-                User_id = Request.QueryString["UserId"];
-                FillSuperCheckBoxListItems(int.Parse(User_id));
+                //User_id = Request.QueryString["UserId"];
+                FillSuperCheckBoxListItems(UserName);
             }
 
         }
 
-        private void FillSuperCheckBoxListItems(int UserID)
+        protected void HomeLogoButton_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("main.aspx?UserName=" + UserName);
+        }
+
+        private void FillSuperCheckBoxListItems(string UserName)
         {
             db = new DataBase();
             //int countOfProducts = db.GetCountOfProducts(UserID);
-            Items = db.GetAllProductsFromUser(UserID);
+            Items = db.GetAllProductsFromUser(UserName);
         
             for (int i = 0; i < Items.Count; i++)
             {
@@ -56,11 +66,11 @@ namespace HomeOrganization
         protected void AddProductButton_Click(object sender, EventArgs e)
         {
             //ListItem[] item1 = new ListItem[5];
-            int UserId = UserID;
+            //int UserId = UserID;
             string productQuntity = QuntityDropDownList.Text;
             int Urgency  = int.Parse(UrgencyDropDownList.Text);
             db = new DataBase();
-            Sucsess = db.AddProductToShoppingList(UserID, ProductNameTextBox.Text, productQuntity, Urgency);
+            Sucsess = db.AddProductToShoppingList(UserName, ProductNameTextBox.Text, productQuntity, Urgency);
             if (Sucsess)
                 Response.Redirect(Request.RawUrl);
             else
@@ -107,6 +117,8 @@ namespace HomeOrganization
             Urgency = int.Parse(UrgencyDropDownList.SelectedItem.Value);
 
         }
+
+        
 
         
     }

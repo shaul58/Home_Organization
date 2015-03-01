@@ -19,7 +19,7 @@
             <!-- Latest compiled and minified JavaScript -->
         <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
     <script src="carouselSlide.js"></script>
-     <%--<script>
+    <%--<script>
              
                $(document).ready(function() {
                  $('.carousel').carousel({
@@ -41,9 +41,9 @@
                            <span class="icon-bar"></span>
                              <span class="icon-bar"></span>
                            </button>
-                         <%--<asp:Label ID="LogInLabel" runat="server" Text="Home-Organization"></asp:Label>--%>
+                           <%--<asp:Label ID="LogInLabel" runat="server" Text="Home-Organization"></asp:Label>--%>
                          <a class="navbar-brand" href="#"><asp:Label ID="navBarLogoLabel" runat="server" Text="Home-Organization"></asp:Label></a>
-                         <a class="navbar-brand" href="#"><asp:Label ID="Label1" runat="server" Text="ברוך הבא : אורח"></asp:Label></a>
+                         <a class="navbar-brand" href="#"><asp:Label ID="logInUserLabel" runat="server" Text="ברוך הבא : אורח"></asp:Label></a>
                           </div>
                     <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse navbar-ex1-collapse ">
@@ -64,18 +64,16 @@
                      
                  </li>
                </ul>
-                <%--<asp:Button class="btn btn-default navbar-btn  btn-inverse  navbar-left  btn-xs " ID="RegisterButton" runat="server" Text="הרשמה   " />--%>
-                
-                <%--<asp:Button class="btn btn-default navbar-btn  btn-inverse  navbar-left  btn-xs " ID="LogInButton" runat="server" Text="התחבר" />--%>
-               <%--     <button type="button" class="btn btn-default navbar-btn  btn-inverse  navbar-left  btn-xs "  >הרשמה</button>
+                   <%--<asp:Button class="btn btn-default navbar-btn  btn-inverse  navbar-left  btn-xs " ID="RegisterButton" runat="server" Text="הרשמה   " />--%>                
+                <%--<asp:Button class="btn btn-default navbar-btn  btn-inverse  navbar-left  btn-xs " ID="LogInButton" runat="server" Text="התחבר" />--%>               <%--     <button type="button" class="btn btn-default navbar-btn  btn-inverse  navbar-left  btn-xs "  >הרשמה</button>
              <button type="button" class="btn btn-default navbar-btn  navbar-left btn-xs btn-primary"  >התחברות</button>--%>
              </div><!-- /.navbar-collapse -->
             <div dir="ltr">
                   <%--&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp&nbsp--%>
                 <asp:Button ID="registerButton" runat="server" Height="25px" Width="70px" Text="הרשם" BackColor="#FF6600" BorderColor="#000099" BorderStyle="Inset" />
-                <asp:Button ID="logInButton" runat="server" Height="25px" Width="70px" Text="התחבר" BorderStyle="Groove" BorderColor="#0000CC" Font-Bold="True" BackColor="#FF5050" />
-                <asp:TextBox ID="TextBox2" runat="server" Height="25px" Width="70px">ססמה</asp:TextBox>
-                <asp:TextBox ID="TextBox1" runat="server" Height="25px" Width="70px">שם משתמש</asp:TextBox>
+                <asp:Button ID="logInButton" runat="server" Height="25px" Width="70px" Text="התחבר" BorderStyle="Groove" BorderColor="#0000CC" Font-Bold="True" BackColor="#FF5050" OnClick="logInButton_Click" TabIndex="3" />
+                <asp:TextBox ID="UserPasswordTextBox" runat="server" Height="25px" Width="70px" TabIndex="2">ססמה</asp:TextBox>
+                <asp:TextBox ID="UserNameTextBox" runat="server" Height="25px" Width="70px" TabIndex="1">שם משתמש</asp:TextBox>
                 
                 <asp:Label ID="Label2" runat="server" Text="LogIN:" BackColor="#FF0066"></asp:Label>
 
@@ -148,7 +146,7 @@
                      <div class="col-sm-4" id="img4">
                       <h4></h4>
                     <asp:ImageButton ID="ImageButton4" runat="server" ToolTip="img4" ImageUrl="~/gallery/products/Icone.jpg" Height="150px" Width="200px" ImageAlign="Middle" />
-                      <%--<img src="gallery/thmb1.jpg" alt="..." >--%>
+                         <%--<img src="gallery/thmb1.jpg" alt="..." >--%>
                       <p></p>
                        <br>
                     

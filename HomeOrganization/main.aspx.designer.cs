@@ -31,13 +31,13 @@ namespace HomeOrganization {
         protected global::System.Web.UI.WebControls.Label navBarLogoLabel;
         
         /// <summary>
-        /// Label1 control.
+        /// logInUserLabel control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label1;
+        protected global::System.Web.UI.WebControls.Label logInUserLabel;
         
         /// <summary>
         /// registerButton control.
@@ -58,22 +58,22 @@ namespace HomeOrganization {
         protected global::System.Web.UI.WebControls.Button logInButton;
         
         /// <summary>
-        /// TextBox2 control.
+        /// UserPasswordTextBox control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox2;
+        protected global::System.Web.UI.WebControls.TextBox UserPasswordTextBox;
         
         /// <summary>
-        /// TextBox1 control.
+        /// UserNameTextBox control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox1;
+        protected global::System.Web.UI.WebControls.TextBox UserNameTextBox;
         
         /// <summary>
         /// Label2 control.

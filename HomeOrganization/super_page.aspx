@@ -33,9 +33,12 @@
                            <span class="icon-bar"></span>
                              <span class="icon-bar"></span>
                            </button>
+                             <a class="navbar-brand" href="#"><asp:Button ID="HomeLogoButton" runat="server" Text="Organizion-Home" BackColor="#990099" BorderColor="Black" BorderStyle="Dotted" CssClass="carousel" Font-Bold="True" Font-Italic="True" Font-Names="Arial" Font-Size="Medium" ForeColor="White" OnClick="HomeLogoButton_Click" /></a>
+                         <a class="navbar-brand" href="#"><asp:Label ID="logInUserLabel" runat="server" Text="ברוך הבא : אורח"></asp:Label></a>
                            <%--<asp:Label ID="LogInLabel" runat="server" Text="Home-Organization"></asp:Label>--%>
-                         <a class="navbar-brand" href="#"><asp:Label ID="navBarLogoLabel" runat="server" Text="Home-Organization"></asp:Label></a>
-                         <a class="navbar-brand" href="#"><asp:Label ID="Label1" runat="server" Text="ברוך הבא : אורח"></asp:Label></a>
+                         <%--<a class="navbar-brand" href="#"><asp:Label ID="navBarLogoLabel" runat="server" Text="Home-Organization"></asp:Label></a>--%>
+                         
+                         
                           </div>
                     <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse navbar-ex1-collapse ">
