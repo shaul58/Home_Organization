@@ -82,6 +82,7 @@
     <Content Include="gallery\img3.jpg" />
     <Content Include="gallery\products\Icone.jpg" />
     <Content Include="gallery\products\MessagesAndUpdates_1.jpg" />
+    <Content Include="gallery\products\MyHealth.jpg" />
     <Content Include="gallery\products\הודעות ועדכונים_2.jpg" />
     <Content Include="gallery\products\הודעות ועדכונים_3.jpg" />
     <Content Include="gallery\products\הודעות ועדכונים_4.jpg" />
@@ -95,13 +96,11 @@
     <Content Include="js\bootstrap.js" />
     <Content Include="js\bootstrap.min.js" />
     <Content Include="js\carousel.js" />
-    <Content Include="LogInCss.css" />
     <Content Include="main.aspx" />
     <Content Include="main.css" />
     <Content Include="messagesForm.aspx" />
-    <Content Include="messagesPage.aspx" />
+    <Content Include="MyHealthPage.aspx" />
     <Content Include="super_page.aspx" />
-    <Content Include="UserLogIn.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -120,12 +119,12 @@
     <Compile Include="messagesForm.aspx.designer.cs">
       <DependentUpon>messagesForm.aspx</DependentUpon>
     </Compile>
-    <Compile Include="messagesPage.aspx.cs">
-      <DependentUpon>messagesPage.aspx</DependentUpon>
+    <Compile Include="MyHealthPage.aspx.cs">
+      <DependentUpon>MyHealthPage.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="messagesPage.aspx.designer.cs">
-      <DependentUpon>messagesPage.aspx</DependentUpon>
+    <Compile Include="MyHealthPage.aspx.designer.cs">
+      <DependentUpon>MyHealthPage.aspx</DependentUpon>
     </Compile>
     <Compile Include="NewItem.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -135,13 +134,6 @@
     </Compile>
     <Compile Include="super_page.aspx.designer.cs">
       <DependentUpon>super_page.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="UserLogIn.aspx.cs">
-      <DependentUpon>UserLogIn.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="UserLogIn.aspx.designer.cs">
-      <DependentUpon>UserLogIn.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

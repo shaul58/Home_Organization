@@ -11,7 +11,7 @@ namespace HomeOrganization
 {
 
 
-    public partial class messagesPage
+    public partial class MyHealthPage
     {
 
         /// <summary>
