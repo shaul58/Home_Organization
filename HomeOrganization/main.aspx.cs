@@ -18,29 +18,29 @@ namespace HomeOrganization
         protected void Page_Load(object sender, EventArgs e)
         {
             //User_ID = UserId;
-            if(isClicked)
+            if (isClicked)
             {
                 Response.Redirect("main.aspx?UserId=555");
                 logInUserLabel.Text = "ברוך הבא : " + UserNameTextBox.Text;
             }
 
-             if (!Page.IsPostBack)
+            if (!Page.IsPostBack)
             {
                 UserPasswordTextBox.Text = "";
                 //UserPasswordTextBox.Focus();
                 UserNameTextBox.Text = "";
                 UserNameTextBox.Focus();
             }
-             UserName = Request.QueryString["UserName"];
-             if(UserName != null)
-             {
-                 logInButton.Visible = false;
-                 registerButton.Visible = false;
-                 UserNameTextBox.Visible = false;
-                 UserPasswordTextBox.Visible = false;
-                 logInUserLabel.Text = "ברוך הבא : " + UserName;
-             }
-             
+            UserName = Request.QueryString["UserName"];
+            if (UserName != null)
+            {
+                logInButton.Visible = false;
+                registerButton.Visible = false;
+                UserNameTextBox.Visible = false;
+                UserPasswordTextBox.Visible = false;
+                logInUserLabel.Text = "ברוך הבא : " + UserName;
+            }
+
         }
 
         protected void superImageButton_Click(object sender, ImageClickEventArgs e)
@@ -68,8 +68,13 @@ namespace HomeOrganization
             }
         }
 
-        
-    }
-    
+        protected void ImageButton5_Click(object sender, ImageClickEventArgs e)
+        {
+            Response.Redirect("MyHealthPage.aspx?UserName=" + UserName);
+        }
 
+
+
+
+    }
 }

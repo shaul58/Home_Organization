@@ -72,7 +72,7 @@
              <div class="row1" >
             <div class="col-sm-12" id="superHeadLine">
                
-                      <h1 align="center">כותרת העמוד</h1> 
+                      <h1>כותרת העמוד</h1> 
                   </div>
             </div>
             <%--<div class="row1" >

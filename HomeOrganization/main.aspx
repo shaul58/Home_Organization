@@ -146,14 +146,14 @@
                      <div class="col-sm-4" id="img4">
                       <h4></h4>
                     <asp:ImageButton ID="ImageButton4" runat="server" ToolTip="img4" ImageUrl="~/gallery/products/Icone.jpg" Height="150px" Width="200px" ImageAlign="Middle" />
-                         <%--<img src="gallery/thmb1.jpg" alt="..." >--%>
+                         
                       <p></p>
                        <br>
                     
                   </div>
                       <div class="col-sm-3" id="img5" >
                       <h4>MyHealth</h4>
-                      <asp:ImageButton ID="ImageButton5" runat="server" ToolTip="img5" ImageUrl="~/gallery/products/MyHealth.jpg" Height="150px" Width="200px" ImageAlign="Middle" />
+                      <asp:ImageButton ID="ImageButton5" runat="server" ToolTip="img5" ImageUrl="~/gallery/products/MyHealth.jpg"  Height="150px" Width="200px" ImageAlign="Middle" OnClick="ImageButton5_Click"  />
                       <p></p>
                        <br>
                     
