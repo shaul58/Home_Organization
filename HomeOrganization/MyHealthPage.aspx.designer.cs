@@ -76,6 +76,15 @@ namespace HomeOrganization {
         protected global::System.Web.UI.WebControls.DropDownList KindOfOut_DropDownList;
         
         /// <summary>
+        /// EscapeDropDownList control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList EscapeDropDownList;
+        
+        /// <summary>
         /// AddAUtoButtonPanel control.
         /// </summary>
         /// <remarks>
@@ -130,6 +139,15 @@ namespace HomeOrganization {
         protected global::System.Web.UI.WebControls.DropDownList KindOfOut_DropDownList2;
         
         /// <summary>
+        /// EscapeDropDownList0 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList EscapeDropDownList0;
+        
+        /// <summary>
         /// AddMenualButtonPanel control.
         /// </summary>
         /// <remarks>
@@ -137,5 +155,50 @@ namespace HomeOrganization {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button AddMenualButtonPanel;
+        
+        /// <summary>
+        /// FoodPanel control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Panel FoodPanel;
+        
+        /// <summary>
+        /// BreakfastTextBox control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox BreakfastTextBox;
+        
+        /// <summary>
+        /// LunchTextBox control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox LunchTextBox;
+        
+        /// <summary>
+        /// DinnerTextBox control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox DinnerTextBox;
+        
+        /// <summary>
+        /// UpdateFoodButtonPanel0 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button UpdateFoodButtonPanel0;
     }
 }

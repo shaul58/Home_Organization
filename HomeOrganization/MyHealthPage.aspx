@@ -74,9 +74,14 @@
            
         <!-- new row - row3 -->
             
-        <div class="row" id="row3" dir="rtl">
+        <div class="row" id="row3" >
+
+            <div class="col-sm-4" id="col3" >...
+                </div>
+            <div class="col-sm-4" id="col3" >---
+                </div>
             
-                <div class="col-sm-4" id="col3" dir="rtl">
+                <div class="col-sm-4" id="col3" >
                     
                    
                     <asp:Button ID="AddAutoButton" runat="server" BackColor="#FFFF99" BorderStyle="Ridge" Height="80px" OnClick="AddAutoButton_Click" Text="הוספה אוטומטית" Width="100px" />
@@ -100,8 +105,13 @@
                     <asp:ListItem Value="hardShilshol">שלשול חריף</asp:ListItem>
                     <asp:ListItem Value="נוזלי">Liquid</asp:ListItem>
                 </asp:DropDownList>
-                &nbsp;&nbsp;&nbsp;&nbsp;
-                <asp:Button ID="AddAUtoButtonPanel" runat="server" Text="ADD" Width="110px" />
+                &nbsp;&nbsp;<asp:DropDownList ID="EscapeDropDownList" runat="server" Width="100px">
+                    <asp:ListItem Selected="True" Value="escape">ברח</asp:ListItem>
+                    <asp:ListItem Value="noEscape"></asp:ListItem>
+                    <asp:ListItem Value="littelEscape">ברח קצת</asp:ListItem>
+                    <asp:ListItem Value="bigEscape">ברח הרבה</asp:ListItem>
+                </asp:DropDownList>
+                &nbsp;&nbsp;<asp:Button ID="AddAUtoButtonPanel" runat="server" CssClass="btn-danger disabled" Height="40px" Text="ADD" Width="110px" />
                 &nbsp;</asp:Panel>
         </div>
         <div class="row">
@@ -158,7 +168,26 @@
                     <asp:ListItem Value="נוזלי">Liquid</asp:ListItem>
                 </asp:DropDownList>
                 &nbsp;&nbsp;
-                <asp:Button ID="AddMenualButtonPanel" runat="server" Text="ADD" Width="100px" />
+                <asp:DropDownList ID="EscapeDropDownList0" runat="server" Width="100px">
+                    <asp:ListItem Selected="True" Value="escape">ברח</asp:ListItem>
+                    <asp:ListItem Value="noEscape"></asp:ListItem>
+                    <asp:ListItem Value="littelEscape">ברח קצת</asp:ListItem>
+                    <asp:ListItem Value="bigEscape">ברח הרבה</asp:ListItem>
+                </asp:DropDownList>
+                &nbsp;&nbsp;&nbsp;
+                <asp:Button ID="AddMenualButtonPanel" runat="server" Text="ADD" Width="100px" CssClass="btn-danger disabled" Height="40px" />
+            </asp:Panel>
+        </div>
+
+        <div class="row">
+            <asp:Panel ID="FoodPanel" runat="server" Height="100px" Width="1000px" BorderStyle="Outset" Direction="RightToLeft" BackColor="#FFCC99" BorderColor="#FFCC99">
+                <asp:TextBox ID="BreakfastTextBox" runat="server" ForeColor="Black" Height="49px" TextMode="MultiLine" ToolTip="ארוחת בוקר שלי" Width="176px">ארוחת בוקר </asp:TextBox>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <asp:TextBox ID="LunchTextBox" runat="server" ForeColor="#CC0000" Height="49px" TextMode="MultiLine" ToolTip="ארוחת צהריים שלי" Width="257px">ארוחת צהריים</asp:TextBox>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <asp:TextBox ID="DinnerTextBox" runat="server" ForeColor="#006600" Height="49px" TextMode="MultiLine" Width="182px">ארוחת ערב</asp:TextBox>
+                &nbsp;
+                <asp:Button ID="UpdateFoodButtonPanel0" runat="server" BorderStyle="Outset" CssClass="btn-danger disabled" Height="40px" Text="עדכן ארוחה" Width="100px" />
             </asp:Panel>
         </div>
               

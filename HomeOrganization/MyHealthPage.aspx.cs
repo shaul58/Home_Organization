@@ -17,6 +17,7 @@ namespace HomeOrganization
             {
                 logInUserLabel.Text = "ברוך הבא : " + UserName;
             }
+            BreakfastTextBox.Focus();
         }
 
         protected void HomeLogoButton_Click(object sender, EventArgs e)
