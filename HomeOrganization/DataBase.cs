@@ -174,5 +174,26 @@ namespace HomeOrganization
             return UserName;
             
         }
+
+        public void Add_AutoPanelData(string DateToday, string dayToday, string TimeNow, string KindOfOut, string Escape)
+        {
+            con.Open();
+            string Query = "";
+            cmd = new SqlCommand(Query, con);
+            cmd.CommandType = CommandType.Text;
+            int affectedRows = cmd.ExecuteNonQuery();
+            con.Close();
+
+        }
+
+        public void UpdateFoodPanelToTable(string Breakfast, string Lunch, string Dinner)
+        {
+            con.Open();
+            string Query = "";
+            cmd = new SqlCommand(Query, con);
+            cmd.CommandType = CommandType.Text;
+            int affectedRows = cmd.ExecuteNonQuery();
+            con.Close();
+        }
     }
 }

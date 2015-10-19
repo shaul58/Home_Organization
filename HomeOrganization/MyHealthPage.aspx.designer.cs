@@ -40,22 +40,31 @@ namespace HomeOrganization {
         protected global::System.Web.UI.WebControls.Label logInUserLabel;
         
         /// <summary>
-        /// AddAutoButton control.
+        /// ShowAutoPanelButton control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button AddAutoButton;
+        protected global::System.Web.UI.WebControls.Button ShowAutoPanelButton;
         
         /// <summary>
-        /// AddMenualButton control.
+        /// ShowMenualPanelButton control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button AddMenualButton;
+        protected global::System.Web.UI.WebControls.Button ShowMenualPanelButton;
+        
+        /// <summary>
+        /// ShowFoodPanelButton control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button ShowFoodPanelButton;
         
         /// <summary>
         /// AutoPanel control.
@@ -85,13 +94,13 @@ namespace HomeOrganization {
         protected global::System.Web.UI.WebControls.DropDownList EscapeDropDownList;
         
         /// <summary>
-        /// AddAUtoButtonPanel control.
+        /// AddAUtoPanelButton control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button AddAUtoButtonPanel;
+        protected global::System.Web.UI.WebControls.Button AddAUtoPanelButton;
         
         /// <summary>
         /// MenualPanel control.
@@ -110,6 +119,15 @@ namespace HomeOrganization {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox DateTextBox;
+        
+        /// <summary>
+        /// DAYDropDownList control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList DAYDropDownList;
         
         /// <summary>
         /// TimeMinute_DropDownList2 control.
@@ -148,13 +166,13 @@ namespace HomeOrganization {
         protected global::System.Web.UI.WebControls.DropDownList EscapeDropDownList0;
         
         /// <summary>
-        /// AddMenualButtonPanel control.
+        /// AddMenualPanelButton control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button AddMenualButtonPanel;
+        protected global::System.Web.UI.WebControls.Button AddMenualPanelButton;
         
         /// <summary>
         /// FoodPanel control.
@@ -193,12 +211,12 @@ namespace HomeOrganization {
         protected global::System.Web.UI.WebControls.TextBox DinnerTextBox;
         
         /// <summary>
-        /// UpdateFoodButtonPanel0 control.
+        /// UpdateFoodPanelButton control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button UpdateFoodButtonPanel0;
+        protected global::System.Web.UI.WebControls.Button UpdateFoodPanelButton;
     }
 }
