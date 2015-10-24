@@ -59,9 +59,9 @@ namespace HomeOrganization
 
         protected void AddMenualPanelButton_Click(object sender, EventArgs e)
         {
-            string DateToday = DateTextBox.Text;
+            string DateToday = datepicker.Text;
             string dayToday = DAYDropDownList.Text;
-            string TimeNow = TimeHour_DropDownList.Text + ":" + TimeMinute_DropDownList2;
+            string TimeNow = TimeHour_DropDownList.Text + ":" + TimeMinute_DropDownList2.Text;
             string KindOfOut = KindOfOut_DropDownList2.Text;
             string Escape = EscapeDropDownList0.Text;
             db.Add_AutoPanelData(DateToday,dayToday, TimeNow, KindOfOut, Escape);

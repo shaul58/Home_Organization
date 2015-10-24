@@ -195,5 +195,10 @@ namespace HomeOrganization
             int affectedRows = cmd.ExecuteNonQuery();
             con.Close();
         }
+
+        internal void Add_AutoPanelData(string DateToday, string TimeNow, string KindOfOut, string Escape)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

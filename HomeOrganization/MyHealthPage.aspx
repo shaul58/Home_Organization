@@ -18,6 +18,15 @@
 
             <!-- Latest compiled and minified JavaScript -->
         <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+         <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css" />
+  <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+  <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+  <link rel="stylesheet" href="/resources/demos/style.css" />
+  <script>
+      $(function () {
+          $("#datepicker").datepicker({  showButtonPanel: true });
+      });
+  </script>
 
 </head>
 <body dir="rtl">
@@ -118,7 +127,7 @@
         </div>
         <div class="row">
             <asp:Panel ID="MenualPanel" runat="server" BackColor="#FF6600" Height="100px" Width="1000px" BorderStyle="Outset" Direction="RightToLeft" Visible="False">
-                <asp:TextBox ID="DateTextBox" runat="server"></asp:TextBox>
+                <asp:TextBox ID="datepicker" runat="server"></asp:TextBox>
                 &nbsp;
                 <asp:DropDownList ID="DAYDropDownList" runat="server" CssClass="active">
                     <asp:ListItem Value="SUNDAY">ראשון</asp:ListItem>
