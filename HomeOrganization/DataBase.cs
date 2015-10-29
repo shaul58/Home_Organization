@@ -196,9 +196,21 @@ namespace HomeOrganization
             con.Close();
         }
 
-        internal void Add_AutoPanelData(string DateToday, string TimeNow, string KindOfOut, string Escape)
+        
+        public bool Add_OutlDataToTable(string DateToday, string dayToday, string TimeNow, string KindOfOut, string Escape)
         {
-            throw new NotImplementedException();
+            con.Open();
+            string Query = "INSERT INTO MyHealth_OUTS(Date, Day, Time, KindOfOut, [Escape])"+
+                           "VALUES('"+DateToday+"',N'"+dayToday+"','"+TimeNow+"',N'"+KindOfOut+"',N'"+Escape+"')";
+            cmd = new SqlCommand(Query, con);
+            cmd.CommandType = CommandType.Text;
+            int affectedRows = cmd.ExecuteNonQuery();
+            con.Close();
+            if (affectedRows > 0)
+                return true;
+            else
+                return false;
+            
         }
     }
 }

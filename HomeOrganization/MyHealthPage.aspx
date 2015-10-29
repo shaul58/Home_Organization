@@ -24,7 +24,7 @@
   <link rel="stylesheet" href="/resources/demos/style.css" />
   <script>
       $(function () {
-          $("#datepicker").datepicker({  showButtonPanel: true });
+          $("#datepicker").datepicker({ showButtonPanel: true, dateFormat: 'dd-mm-yy' }); //{ dateFormat: 'dd-mm-yy' }
       });
   </script>
 
@@ -111,33 +111,34 @@
             <asp:Panel ID="AutoPanel" runat="server" BackColor="#FF6699" Height="100px" Width="1000px" BorderStyle="Outset" Direction="RightToLeft" BorderColor="#FF66CC" Visible="False">
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 <asp:DropDownList ID="KindOfOut_DropDownList" runat="server" Width="140px">
-                    <asp:ListItem Selected="True" Value="normal">רגיל</asp:ListItem>
-                    <asp:ListItem Value="shilahol">שלשול</asp:ListItem>
-                    <asp:ListItem Value="hardShilshol">שלשול חריף</asp:ListItem>
-                    <asp:ListItem Value="נוזלי">Liquid</asp:ListItem>
+                    <asp:ListItem Selected="True" Value="רגיל">רגיל</asp:ListItem>
+                    <asp:ListItem Value="שלשול">שלשול</asp:ListItem>
+                    <asp:ListItem Value="שלשול חריף">שלשול חריף</asp:ListItem>
+                    <asp:ListItem Value="נוזלי">נוזלי</asp:ListItem>
                 </asp:DropDownList>
                 &nbsp;&nbsp;<asp:DropDownList ID="EscapeDropDownList" runat="server" Width="100px">
-                    <asp:ListItem Value="escape">ברח</asp:ListItem>
-                    <asp:ListItem Value="noEscape" Selected="True">לא ברח</asp:ListItem>
-                    <asp:ListItem Value="littelEscape">ברח קצת</asp:ListItem>
-                    <asp:ListItem Value="bigEscape">ברח הרבה</asp:ListItem>
+                    <asp:ListItem Value="ברח">ברח</asp:ListItem>
+                    <asp:ListItem Value="לא ברח" Selected="True">לא ברח</asp:ListItem>
+                    <asp:ListItem Value="ברח קצת">ברח קצת</asp:ListItem>
+                    <asp:ListItem Value="ברח הרבה">ברח הרבה</asp:ListItem>
                 </asp:DropDownList>
                 &nbsp;&nbsp;<asp:Button ID="AddAUtoPanelButton" runat="server" CssClass="btn-danger disabled" Height="40px" Text="Update" Width="110px" OnClick="AddAUtoButtonPanel_Click" />
                 &nbsp;</asp:Panel>
         </div>
         <div class="row">
             <asp:Panel ID="MenualPanel" runat="server" BackColor="#FF6600" Height="100px" Width="1000px" BorderStyle="Outset" Direction="RightToLeft" Visible="False">
-                <asp:TextBox ID="datepicker" runat="server"></asp:TextBox>
+                <asp:TextBox ID="datepicker" runat="server" BorderStyle="Ridge" ForeColor="Maroon" ToolTip="בחר תאריך ">
+בחר תאריך</asp:TextBox>
                 &nbsp;
                 <asp:DropDownList ID="DAYDropDownList" runat="server" CssClass="active">
-                    <asp:ListItem Value="SUNDAY">ראשון</asp:ListItem>
-                    <asp:ListItem Value="MONDAY">שני</asp:ListItem>
-                    <asp:ListItem Value="Tuesday">שלישי</asp:ListItem>
-                    <asp:ListItem Value="Wednesday">רביעי</asp:ListItem>
-                    <asp:ListItem Value="Thursday">חמישי</asp:ListItem>
-                    <asp:ListItem Value="Friday ">שישי</asp:ListItem>
-                    <asp:ListItem Value="Saturday">שבת</asp:ListItem>
-                    <asp:ListItem Selected="True">יום</asp:ListItem>
+                    <asp:ListItem Value="ראשון">ראשון</asp:ListItem>
+                    <asp:ListItem Value="שני">שני</asp:ListItem>
+                    <asp:ListItem Value="שלישי">שלישי</asp:ListItem>
+                    <asp:ListItem Value="רביע">רביעי</asp:ListItem>
+                    <asp:ListItem Value="חמישי">חמישי</asp:ListItem>
+                    <asp:ListItem Value="שישי">שישי</asp:ListItem>
+                    <asp:ListItem Value="שבת">שבת</asp:ListItem>
+                    <asp:ListItem Selected="True" Value="day">יום</asp:ListItem>
                 </asp:DropDownList>
                 &nbsp;
                 <asp:DropDownList ID="TimeMinute_DropDownList2" runat="server" Width="50px">
@@ -184,17 +185,17 @@
                     <asp:ListItem Selected="True">שעה</asp:ListItem>
                 </asp:DropDownList>
                 &nbsp;&nbsp;&nbsp;<asp:DropDownList ID="KindOfOut_DropDownList2" runat="server" Width="140px">
-                    <asp:ListItem Selected="True" Value="normal">רגיל</asp:ListItem>
-                    <asp:ListItem Value="shilahol">שלשול</asp:ListItem>
-                    <asp:ListItem Value="hardShilshol">שלשול חריף</asp:ListItem>
-                    <asp:ListItem Value="נוזלי">Liquid</asp:ListItem>
+                    <asp:ListItem Selected="True" Value="רגיל">רגיל</asp:ListItem>
+                    <asp:ListItem Value="שלשול">שלשול</asp:ListItem>
+                    <asp:ListItem Value="שלשול חריף">שלשול חריף</asp:ListItem>
+                    <asp:ListItem Value="נוזלי">נוזלי</asp:ListItem>
                 </asp:DropDownList>
                 &nbsp;&nbsp;
                 <asp:DropDownList ID="EscapeDropDownList0" runat="server" Width="100px">
-                    <asp:ListItem Value="escape">ברח</asp:ListItem>
-                    <asp:ListItem Value="noEscape" Selected="True">לא ברח</asp:ListItem>
-                    <asp:ListItem Value="littelEscape">ברח קצת</asp:ListItem>
-                    <asp:ListItem Value="bigEscape">ברח הרבה</asp:ListItem>
+                    <asp:ListItem Value="ברח">ברח</asp:ListItem>
+                    <asp:ListItem Value="לא ברח" Selected="True">לא ברח</asp:ListItem>
+                    <asp:ListItem Value="ברח קצת">ברח קצת</asp:ListItem>
+                    <asp:ListItem Value="ברח הרבה">ברח הרבה</asp:ListItem>
                 </asp:DropDownList>
                 &nbsp;&nbsp;&nbsp;
                 <asp:Button ID="AddMenualPanelButton" runat="server" Text="Update" Width="100px" CssClass="btn-danger disabled" Height="40px" BorderStyle="Solid" OnClick="AddMenualPanelButton_Click" />

@@ -54,8 +54,18 @@ namespace HomeOrganization
             string TimeNow = DateTime.Now.ToShortTimeString();
             string KindOfOut = KindOfOut_DropDownList.Text;
             string Escape = EscapeDropDownList.Text;
-            db.Add_AutoPanelData(DateToday, TimeNow, KindOfOut, Escape);
+            bool sucsess = db.Add_OutlDataToTable(DateToday, dayToday, TimeNow, KindOfOut, Escape);
+            if (sucsess)
+            {
+                // sucsess alert
+            }
+            else
+            {
+                //faild alert
+            }
+
         }
+            
 
         protected void AddMenualPanelButton_Click(object sender, EventArgs e)
         {
@@ -64,7 +74,15 @@ namespace HomeOrganization
             string TimeNow = TimeHour_DropDownList.Text + ":" + TimeMinute_DropDownList2.Text;
             string KindOfOut = KindOfOut_DropDownList2.Text;
             string Escape = EscapeDropDownList0.Text;
-            db.Add_AutoPanelData(DateToday,dayToday, TimeNow, KindOfOut, Escape);
+            bool sucsess = db.Add_OutlDataToTable(DateToday,dayToday, TimeNow, KindOfOut, Escape);
+            if(sucsess)
+            {
+                // sucsess alert
+            }
+            else
+            {
+                //faild alert
+            }
     
         }
 
