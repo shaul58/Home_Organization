@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
@@ -31,6 +32,12 @@ namespace HomeOrganization
             AutoPanel.Visible = true;
             MenualPanel.Visible = false;
             FoodPanel.Visible = false;
+            //
+            string hexColor = "#FF6699";
+
+            Color myColor = System.Drawing.ColorTranslator.FromHtml(hexColor);
+
+            AutoPanel.BackColor = myColor;
         }
 
         protected void ShowMenualPanelButton_Click(object sender, EventArgs e)
@@ -38,6 +45,12 @@ namespace HomeOrganization
             MenualPanel.Visible = true;
             AutoPanel.Visible = false;
             FoodPanel.Visible = false;
+            //
+            string hexColor = "#FF6600";
+
+            Color myColor = System.Drawing.ColorTranslator.FromHtml(hexColor);
+
+            MenualPanel.BackColor = myColor;
         }
 
         protected void ShowFoodPanelButton_Click(object sender, EventArgs e)
@@ -45,6 +58,12 @@ namespace HomeOrganization
             FoodPanel.Visible = true;
             AutoPanel.Visible = false;
             MenualPanel.Visible = false;
+            //
+            string hexColor = "#FFCC99";
+
+            Color myColor = System.Drawing.ColorTranslator.FromHtml(hexColor);
+
+            FoodPanel.BackColor = myColor;
         }
 
         protected void AddAUtoButtonPanel_Click(object sender, EventArgs e)
@@ -57,10 +76,11 @@ namespace HomeOrganization
             bool sucsess = db.Add_OutlDataToTable(DateToday, dayToday, TimeNow, KindOfOut, Escape);
             if (sucsess)
             {
-                // sucsess alert
+                AutoPanel.BackColor = Color.GreenYellow;
             }
             else
             {
+                AutoPanel.BackColor = Color.Red;
                 //faild alert
             }
 
@@ -78,10 +98,12 @@ namespace HomeOrganization
             if(sucsess)
             {
                 // sucsess alert
+                MenualPanel.BackColor = Color.GreenYellow;
             }
             else
             {
                 //faild alert
+                MenualPanel.BackColor = Color.Red;
             }
     
         }
