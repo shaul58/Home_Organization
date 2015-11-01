@@ -212,5 +212,33 @@ namespace HomeOrganization
                 return false;
             
         }
+
+        public bool AddFoodToTable(char F,string Food)
+        {
+            string Query = "";
+            string DateToday = DateTime.Now.ToShortDateString();
+            string dayToday = DateTime.Now.DayOfWeek.ToString();
+            string TimeNow = DateTime.Now.ToShortTimeString();
+            con.Open();
+            if (F == 'B')
+                Query = "INSERT INTO MyHealth_FOOD( Date, Day, Time, Breakfast, Lunch, Dinner)"
+                         + "VALUES('" + DateToday + "',N'" + dayToday + "','" + TimeNow + "',N'" + Food + "',' ',' ')";
+            else if (F == 'L')
+                Query = "UPDATE MyHealth_FOOD SET" +
+                       "Lunch = N'"+Food+
+                       "WHERE Date ='" + DateToday + "'";
+            else if (F == 'D')
+                Query = "";
+
+            cmd = new SqlCommand(Query, con);
+            cmd.CommandType = CommandType.Text;
+            int affectedRows = cmd.ExecuteNonQuery();
+            con.Close();
+            if (affectedRows > 0)
+                return true;
+            else
+                return false;
+
+        }
     }
 }

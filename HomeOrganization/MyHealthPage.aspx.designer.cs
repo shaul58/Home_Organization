@@ -193,6 +193,15 @@ namespace HomeOrganization {
         protected global::System.Web.UI.WebControls.TextBox BreakfastTextBox;
         
         /// <summary>
+        /// UpdateBreakfastButton control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.LinkButton UpdateBreakfastButton;
+        
+        /// <summary>
         /// LunchTextBox control.
         /// </summary>
         /// <remarks>
@@ -200,6 +209,15 @@ namespace HomeOrganization {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox LunchTextBox;
+        
+        /// <summary>
+        /// UpdateLunchLinkButton control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.LinkButton UpdateLunchLinkButton;
         
         /// <summary>
         /// DinnerTextBox control.
@@ -211,12 +229,12 @@ namespace HomeOrganization {
         protected global::System.Web.UI.WebControls.TextBox DinnerTextBox;
         
         /// <summary>
-        /// UpdateFoodPanelButton control.
+        /// UpdateDinnerButton control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button UpdateFoodPanelButton;
+        protected global::System.Web.UI.WebControls.Button UpdateDinnerButton;
     }
 }

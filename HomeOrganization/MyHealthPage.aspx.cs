@@ -108,13 +108,52 @@ namespace HomeOrganization
     
         }
 
-        protected void UpdateFoodPanelButton_Click(object sender, EventArgs e)
+        protected void UpdateBreakfastButton_Click(object sender, EventArgs e)
+        {
+            string Breakfast = BreakfastTextBox.Text;
+            bool sucsess = db.AddFoodToTable( Breakfast);
+            if (sucsess)
+            {
+                // sucsess alert
+                MenualPanel.BackColor = Color.GreenYellow;
+            }
+            else
+            {
+                //faild alert
+                MenualPanel.BackColor = Color.Red;
+            }
+        }
+
+        protected void UpdateLunchLinkButton_Click(object sender, EventArgs e)
+        {
+            string Lunch = LunchTextBox.Text;
+            bool sucsess = db.AddFoodToTable('L',Lunch);
+            if (sucsess)
+            {
+                // sucsess alert
+                MenualPanel.BackColor = Color.GreenYellow;
+            }
+            else
+            {
+                //faild alert
+                MenualPanel.BackColor = Color.Red;
+            }
+        }
+
+
+
+
+
+        
+
+        /*protected void UpdateFoodPanelButton_Click(object sender, EventArgs e)
         {
             string Breakfast = BreakfastTextBox.Text;
             string Lunch = LunchTextBox.Text;
             string Dinner = DinnerTextBox.Text;
             db.UpdateFoodPanelToTable(Breakfast, Lunch, Dinner);
-        } 
+        } */
+
 
 
         

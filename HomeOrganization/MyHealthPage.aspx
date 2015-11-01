@@ -104,12 +104,14 @@
                 </div>
                 <div class="col-sm-4" id="col4" dir="rtl">
 
+                    &nbsp;&nbsp;
+
                 </div>
             
             </div>
             <div class="row">
             <asp:Panel ID="AutoPanel" runat="server" BackColor="#FF6699" Height="100px" Width="1000px" BorderStyle="Outset" Direction="RightToLeft" BorderColor="#FF66CC" Visible="False">
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;
                 <asp:DropDownList ID="KindOfOut_DropDownList" runat="server" Width="140px">
                     <asp:ListItem Selected="True" Value="רגיל">רגיל</asp:ListItem>
                     <asp:ListItem Value="שלשול">שלשול</asp:ListItem>
@@ -129,7 +131,7 @@
             <asp:Panel ID="MenualPanel" runat="server" BackColor="#FF6600" Height="100px" Width="1000px" BorderStyle="Outset" Direction="RightToLeft" Visible="False">
                 <asp:TextBox ID="datepicker" runat="server" BorderStyle="Ridge" ForeColor="Maroon" ToolTip="בחר תאריך ">
 בחר תאריך</asp:TextBox>
-                &nbsp;
+                &nbsp;&nbsp;
                 <asp:DropDownList ID="DAYDropDownList" runat="server" CssClass="active">
                     <asp:ListItem Value="ראשון">ראשון</asp:ListItem>
                     <asp:ListItem Value="שני">שני</asp:ListItem>
@@ -203,14 +205,19 @@
         </div>
 
         <div class="row">
-            <asp:Panel ID="FoodPanel" runat="server" Height="100px" Width="1000px" BorderStyle="Outset" Direction="RightToLeft" BackColor="#FFCC99" BorderColor="#FFCC99" Visible="False">
-                <asp:TextBox ID="BreakfastTextBox" runat="server" ForeColor="Black" Height="49px" TextMode="MultiLine" ToolTip="ארוחת בוקר שלי" Width="176px">ארוחת בוקר </asp:TextBox>
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                <asp:TextBox ID="LunchTextBox" runat="server" ForeColor="#CC0000" Height="49px" TextMode="MultiLine" ToolTip="ארוחת צהריים שלי" Width="257px">ארוחת צהריים</asp:TextBox>
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                <asp:TextBox ID="DinnerTextBox" runat="server" ForeColor="#006600" Height="49px" TextMode="MultiLine" Width="182px">ארוחת ערב</asp:TextBox>
-                &nbsp;
-                <asp:Button ID="UpdateFoodPanelButton" runat="server" BorderStyle="Outset" CssClass="btn-danger disabled" Height="40px" Text="עדכן ארוחה" Width="100px" OnClick="UpdateFoodPanelButton_Click" />
+            <asp:Panel ID="FoodPanel" runat="server" Height="350px" Width="1000px" BorderStyle="Outset" Direction="RightToLeft" BackColor="#FFCC99" BorderColor="#FFCC99" Visible="False">
+                <asp:TextBox ID="BreakfastTextBox" runat="server" ForeColor="Black" Height="76px" TextMode="MultiLine" ToolTip="ארוחת בוקר שלי" Width="269px">ארוחת בוקר </asp:TextBox>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<asp:LinkButton ID="UpdateBreakfastButton" runat="server" BorderStyle="Outset" Height="40px" OnClick="UpdateBreakfastButton_Click" Width="100px">עדכן ארוחת בוקר</asp:LinkButton>
+                &nbsp;&nbsp;&nbsp;<br />&nbsp;
+                <br />
+                &nbsp;&nbsp;<asp:TextBox ID="LunchTextBox" runat="server" ForeColor="#CC0000" Height="76px" TextMode="MultiLine" ToolTip="ארוחת צהריים שלי" Width="270px">ארוחת צהריים</asp:TextBox>
+                &nbsp;&nbsp;&nbsp;
+                <asp:LinkButton ID="UpdateLunchLinkButton" runat="server" BorderStyle="Outset" ForeColor="#990000" Height="40px" OnClick="UpdateLunchLinkButton_Click" ToolTip="עדכן ארוחת צהריים" Width="100px">עדכן ארוחת צהריים</asp:LinkButton>
+                <br />
+                <br />
+&nbsp;<asp:TextBox ID="DinnerTextBox" runat="server" ForeColor="#006600" Height="76px" TextMode="MultiLine" Width="270px">ארוחת ערב</asp:TextBox>
+                &nbsp;&nbsp;&nbsp;&nbsp;
+                <asp:Button ID="UpdateDinnerButton" runat="server" BorderStyle="Outset" CssClass="btn-danger disabled" Height="40px" Text="עדכן ארוחה" Width="100px" OnClick="UpdateFoodPanelButton_Click" />
             </asp:Panel>
         </div>
               
