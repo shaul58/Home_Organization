@@ -202,6 +202,15 @@ namespace HomeOrganization {
         protected global::System.Web.UI.WebControls.LinkButton UpdateBreakfastButton;
         
         /// <summary>
+        /// datepicker_B control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox datepicker_B;
+        
+        /// <summary>
         /// LunchTextBox control.
         /// </summary>
         /// <remarks>
@@ -220,6 +229,15 @@ namespace HomeOrganization {
         protected global::System.Web.UI.WebControls.LinkButton UpdateLunchLinkButton;
         
         /// <summary>
+        /// datepicker_L control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox datepicker_L;
+        
+        /// <summary>
         /// DinnerTextBox control.
         /// </summary>
         /// <remarks>
@@ -229,12 +247,21 @@ namespace HomeOrganization {
         protected global::System.Web.UI.WebControls.TextBox DinnerTextBox;
         
         /// <summary>
-        /// UpdateDinnerButton control.
+        /// UpdateDinnerLinkButton control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button UpdateDinnerButton;
+        protected global::System.Web.UI.WebControls.LinkButton UpdateDinnerLinkButton;
+        
+        /// <summary>
+        /// datepicker_D control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox datepicker_D;
     }
 }

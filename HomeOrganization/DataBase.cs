@@ -213,12 +213,19 @@ namespace HomeOrganization
             
         }
 
-        public bool AddFoodToTable(char F,string Food)
+        public bool AddFoodToTable(char F,string Food,string datePicker)
         {
+            string DateToday="";
             string Query = "";
-            string DateToday = DateTime.Now.ToShortDateString();
-            string dayToday = DateTime.Now.DayOfWeek.ToString();
-            string TimeNow = DateTime.Now.ToShortTimeString();
+            if (datePicker != "" || datePicker != "DATE")
+                DateToday = datePicker;
+            else
+            {
+                DateToday = DateTime.Now.ToShortDateString();
+                string dayToday = DateTime.Now.DayOfWeek.ToString();
+
+                string TimeNow = DateTime.Now.ToShortTimeString();
+            }
             con.Open();
             if (F == 'B')
                 Query = "INSERT INTO MyHealth_FOOD( Date, Day, Time, Breakfast, Lunch, Dinner)"
@@ -228,7 +235,9 @@ namespace HomeOrganization
                        "Lunch = N'"+Food+
                        "WHERE Date ='" + DateToday + "'";
             else if (F == 'D')
-                Query = "";
+                Query = "UPDATE MyHealth_FOOD SET" +
+                       " Dinner = N'" + Food +
+                       " WHERE Date ='" + DateToday + "'";
 
             cmd = new SqlCommand(Query, con);
             cmd.CommandType = CommandType.Text;

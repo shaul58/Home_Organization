@@ -107,11 +107,12 @@ namespace HomeOrganization
             }
     
         }
-
+        public string DateToday = "";
         protected void UpdateBreakfastButton_Click(object sender, EventArgs e)
         {
             string Breakfast = BreakfastTextBox.Text;
-            bool sucsess = db.AddFoodToTable( Breakfast);
+            DateToday = datepicker_B.Text;
+            bool sucsess = db.AddFoodToTable('B',Breakfast,DateToday);
             if (sucsess)
             {
                 // sucsess alert
@@ -127,7 +128,7 @@ namespace HomeOrganization
         protected void UpdateLunchLinkButton_Click(object sender, EventArgs e)
         {
             string Lunch = LunchTextBox.Text;
-            bool sucsess = db.AddFoodToTable('L',Lunch);
+            bool sucsess = db.AddFoodToTable('L', Lunch, DateToday);
             if (sucsess)
             {
                 // sucsess alert
@@ -138,6 +139,27 @@ namespace HomeOrganization
                 //faild alert
                 MenualPanel.BackColor = Color.Red;
             }
+        }
+
+        protected void UpdateDinnerLinkButton_Click(object sender, EventArgs e)
+        {
+            string Dinner = DinnerTextBox.Text;
+            bool sucsess = db.AddFoodToTable('D', Dinner, DateToday);
+            if (sucsess)
+            {
+                // sucsess alert
+                MenualPanel.BackColor = Color.GreenYellow;
+            }
+            else
+            {
+                //faild alert
+                MenualPanel.BackColor = Color.Red;
+            }
+        }
+
+        protected void datepicker_B_TextChanged(object sender, EventArgs e)
+        {
+            DateToday = datepicker.Text;
         }
 
 
