@@ -58,6 +58,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="carouselSlide.js" />
+    <Content Include="DatePicker_Jquery.js" />
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="fonts\glyphicons-halflings-regular.woff" />

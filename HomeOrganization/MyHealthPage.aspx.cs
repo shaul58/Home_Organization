@@ -20,6 +20,15 @@ namespace HomeOrganization
                 logInUserLabel.Text = "ברוך הבא : " + UserName;
             }
             BreakfastTextBox.Focus();
+            //string Breakfast = "", Lunch = "", Dinner = "";
+            string date = DateTime.Now.ToShortDateString();
+            List<string> Food = db.GetFoodFromTable(date);
+            if(Food.Count != 0)
+            {
+                BreakfastTextBox.Text = Food[0];
+                LunchTextBox.Text = Food[1];
+                DinnerTextBox.Text = Food[2];
+            }
         }
 
         protected void HomeLogoButton_Click(object sender, EventArgs e)
@@ -89,7 +98,7 @@ namespace HomeOrganization
 
         protected void AddMenualPanelButton_Click(object sender, EventArgs e)
         {
-            string DateToday = datepicker.Text;
+            string DateToday = datepicker_AutoOUt.Text;
             string dayToday = DAYDropDownList.Text;
             string TimeNow = TimeHour_DropDownList.Text + ":" + TimeMinute_DropDownList2.Text;
             string KindOfOut = KindOfOut_DropDownList2.Text;
@@ -116,51 +125,50 @@ namespace HomeOrganization
             if (sucsess)
             {
                 // sucsess alert
-                MenualPanel.BackColor = Color.GreenYellow;
+                BreakfastTextBox.BackColor = Color.GreenYellow;
             }
             else
             {
                 //faild alert
-                MenualPanel.BackColor = Color.Red;
+                BreakfastTextBox.BackColor = Color.Red;
             }
         }
 
         protected void UpdateLunchLinkButton_Click(object sender, EventArgs e)
         {
             string Lunch = LunchTextBox.Text;
+            DateToday = datepicker_L.Text;
             bool sucsess = db.AddFoodToTable('L', Lunch, DateToday);
             if (sucsess)
             {
                 // sucsess alert
-                MenualPanel.BackColor = Color.GreenYellow;
+                LunchTextBox.BackColor = Color.GreenYellow;
             }
             else
             {
                 //faild alert
-                MenualPanel.BackColor = Color.Red;
+                LunchTextBox.BackColor = Color.Red;
             }
         }
 
         protected void UpdateDinnerLinkButton_Click(object sender, EventArgs e)
         {
             string Dinner = DinnerTextBox.Text;
+            DateToday = datepicker_D.Text;
             bool sucsess = db.AddFoodToTable('D', Dinner, DateToday);
             if (sucsess)
             {
                 // sucsess alert
-                MenualPanel.BackColor = Color.GreenYellow;
+                DinnerTextBox.BackColor = Color.GreenYellow;
             }
             else
             {
                 //faild alert
-                MenualPanel.BackColor = Color.Red;
+                DinnerTextBox.BackColor = Color.Red;
             }
         }
 
-        protected void datepicker_B_TextChanged(object sender, EventArgs e)
-        {
-            DateToday = datepicker.Text;
-        }
+        
 
 
 
@@ -168,13 +176,7 @@ namespace HomeOrganization
 
         
 
-        /*protected void UpdateFoodPanelButton_Click(object sender, EventArgs e)
-        {
-            string Breakfast = BreakfastTextBox.Text;
-            string Lunch = LunchTextBox.Text;
-            string Dinner = DinnerTextBox.Text;
-            db.UpdateFoodPanelToTable(Breakfast, Lunch, Dinner);
-        } */
+       
 
 
 

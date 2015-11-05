@@ -217,23 +217,20 @@ namespace HomeOrganization
         {
             string DateToday="";
             string Query = "";
-            if (datePicker != "" || datePicker != "DATE")
+            if (datePicker != " " && datePicker != "DATE")
                 DateToday = datePicker;
             else
             {
                 DateToday = DateTime.Now.ToShortDateString();
-                string dayToday = DateTime.Now.DayOfWeek.ToString();
-
-                string TimeNow = DateTime.Now.ToShortTimeString();
             }
             con.Open();
             if (F == 'B')
-                Query = "INSERT INTO MyHealth_FOOD( Date, Day, Time, Breakfast, Lunch, Dinner)"
-                         + "VALUES('" + DateToday + "',N'" + dayToday + "','" + TimeNow + "',N'" + Food + "',' ',' ')";
+                Query = "INSERT INTO MyHealth_FOOD( Date, Breakfast, Lunch, Dinner)"
+                         + "VALUES('" + DateToday + "',N'" + Food + "',' ',' ')";
             else if (F == 'L')
                 Query = "UPDATE MyHealth_FOOD SET" +
-                       "Lunch = N'"+Food+
-                       "WHERE Date ='" + DateToday + "'";
+                       " Lunch = N'"+Food+ "'" +
+                       " WHERE Date ='" + DateToday + "'";
             else if (F == 'D')
                 Query = "UPDATE MyHealth_FOOD SET" +
                        " Dinner = N'" + Food +
@@ -247,6 +244,29 @@ namespace HomeOrganization
                 return true;
             else
                 return false;
+
+        }
+
+        public List<string> GetFoodFromTable(string date)
+        {
+            List<string> Food = new List<string>();
+            string Query = " SELECT Breakfast, Lunch, Dinner from MyHealth_FOOD"+
+                           " WHERE Date = '"+ date+"'";
+            con.Open();
+            cmd = new SqlCommand(Query, con);
+            cmd.CommandType = CommandType.Text;
+            dr = cmd.ExecuteReader();
+            if (dr.HasRows)
+            {
+                dr.Read();
+
+                Food.Add(dr.GetString(1));
+                Food.Add(dr.GetString(0));
+                Food.Add(dr.GetString(2));
+            }
+            con.Close();
+            return Food;
+
 
         }
     }
