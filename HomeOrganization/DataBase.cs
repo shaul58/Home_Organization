@@ -197,11 +197,18 @@ namespace HomeOrganization
         }
 
         
-        public bool Add_OutlDataToTable(string DateToday, string dayToday, string TimeNow, string KindOfOut, string Escape)
+        public bool Add_OutlDataToTable(char F,string DateToday, string dayToday, string TimeNow, string KindOfOut, string Escape)
         {
+            string Query = "";
             con.Open();
-            string Query = "INSERT INTO MyHealth_OUTS(Date, Day, Time, KindOfOut, [Escape])"+
-                           "VALUES('"+DateToday+"',N'"+dayToday+"','"+TimeNow+"',N'"+KindOfOut+"',N'"+Escape+"')";
+            if (F == 'A')
+                Query = "INSERT INTO MyHealth_OUTS(Date, Day, Time, KindOfOut, [Escape])" +
+                               "VALUES((SELECT CONVERT(VARCHAR(10), GETDATE(), 103)" +
+                               ",N'" + dayToday + "','" + TimeNow + "',N'" + KindOfOut + "',N'" + Escape + "')";
+            else if (F == 'M')
+                Query = "INSERT INTO MyHealth_OUTS(Date, Day, Time, KindOfOut, [Escape])" +
+                               "VALUES('" + DateToday + "',N'" + dayToday + "','" + TimeNow + "',N'" + KindOfOut + "',N'" + Escape + "')";
+
             cmd = new SqlCommand(Query, con);
             cmd.CommandType = CommandType.Text;
             int affectedRows = cmd.ExecuteNonQuery();
@@ -213,7 +220,7 @@ namespace HomeOrganization
             
         }
 
-        public bool AddFoodToTable(char F,string Food,string datePicker)
+        public bool AddFoodToTable(char F,string Food,string Comments,string datePicker)
         {
             string DateToday="";
             string Query = "";
@@ -225,15 +232,15 @@ namespace HomeOrganization
             }
             con.Open();
             if (F == 'B')
-                Query = "INSERT INTO MyHealth_FOOD( Date, Breakfast, Lunch, Dinner)"
-                         + "VALUES('" + DateToday + "',N'" + Food + "',' ',' ')";
+                Query = "INSERT INTO MyHealth_FOOD( Date, Breakfast, Lunch, Dinner, Comments)"
+                         + "VALUES('" + DateToday + "',N'" + Food + "',' ',' ',N'"+Comments+"')";
             else if (F == 'L')
                 Query = "UPDATE MyHealth_FOOD SET" +
-                       " Lunch = N'"+Food+ "'" +
+                       " Lunch = N'" + Food+", , Comments=N'"+Comments+"'"+
                        " WHERE Date ='" + DateToday + "'";
             else if (F == 'D')
                 Query = "UPDATE MyHealth_FOOD SET" +
-                       " Dinner = N'" + Food +
+                       " Dinner = N'" + Food + "',Comments=N'" + Comments + "'" +
                        " WHERE Date ='" + DateToday + "'";
 
             cmd = new SqlCommand(Query, con);
@@ -269,5 +276,6 @@ namespace HomeOrganization
 
 
         }
+
     }
 }

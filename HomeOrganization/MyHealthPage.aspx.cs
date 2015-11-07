@@ -54,7 +54,7 @@ namespace HomeOrganization
             MenualPanel.Visible = true;
             AutoPanel.Visible = false;
             FoodPanel.Visible = false;
-            //
+           
             string hexColor = "#FF6600";
 
             Color myColor = System.Drawing.ColorTranslator.FromHtml(hexColor);
@@ -77,12 +77,12 @@ namespace HomeOrganization
 
         protected void AddAUtoButtonPanel_Click(object sender, EventArgs e)
         {
-            string DateToday = DateTime.Now.ToShortDateString();
+            //string DateToday = DateTime.Now.ToShortDateString();
             string dayToday = DateTime.Now.DayOfWeek.ToString();
             string TimeNow = DateTime.Now.ToShortTimeString();
             string KindOfOut = KindOfOut_DropDownList.Text;
             string Escape = EscapeDropDownList.Text;
-            bool sucsess = db.Add_OutlDataToTable(DateToday, dayToday, TimeNow, KindOfOut, Escape);
+            bool sucsess = db.Add_OutlDataToTable('A',DateToday, dayToday, TimeNow, KindOfOut, Escape);
             if (sucsess)
             {
                 AutoPanel.BackColor = Color.GreenYellow;
@@ -103,7 +103,7 @@ namespace HomeOrganization
             string TimeNow = TimeHour_DropDownList.Text + ":" + TimeMinute_DropDownList2.Text;
             string KindOfOut = KindOfOut_DropDownList2.Text;
             string Escape = EscapeDropDownList0.Text;
-            bool sucsess = db.Add_OutlDataToTable(DateToday,dayToday, TimeNow, KindOfOut, Escape);
+            bool sucsess = db.Add_OutlDataToTable('M', DateToday,dayToday, TimeNow, KindOfOut, Escape);
             if(sucsess)
             {
                 // sucsess alert
@@ -121,7 +121,7 @@ namespace HomeOrganization
         {
             string Breakfast = BreakfastTextBox.Text;
             DateToday = datepicker_B.Text;
-            bool sucsess = db.AddFoodToTable('B',Breakfast,DateToday);
+            bool sucsess = db.AddFoodToTable('B',Breakfast," ",DateToday);
             if (sucsess)
             {
                 // sucsess alert
@@ -138,7 +138,7 @@ namespace HomeOrganization
         {
             string Lunch = LunchTextBox.Text;
             DateToday = datepicker_L.Text;
-            bool sucsess = db.AddFoodToTable('L', Lunch, DateToday);
+            bool sucsess = db.AddFoodToTable('L', Lunch,CommentsTextBox.Text, DateToday);
             if (sucsess)
             {
                 // sucsess alert
@@ -154,8 +154,9 @@ namespace HomeOrganization
         protected void UpdateDinnerLinkButton_Click(object sender, EventArgs e)
         {
             string Dinner = DinnerTextBox.Text;
+            string Comments = CommentsTextBox.Text;
             DateToday = datepicker_D.Text;
-            bool sucsess = db.AddFoodToTable('D', Dinner, DateToday);
+            bool sucsess = db.AddFoodToTable('D', Dinner,Comments, DateToday);
             if (sucsess)
             {
                 // sucsess alert

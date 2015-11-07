@@ -223,19 +223,20 @@
         <div class="row">
             <asp:Panel ID="FoodPanel" runat="server" Height="350px" Width="1000px" BorderStyle="Outset" Direction="RightToLeft" BackColor="#FFCC99" BorderColor="#FFCC99" Visible="False">
                 <asp:TextBox ID="BreakfastTextBox" runat="server" ForeColor="Black" Height="76px" TextMode="MultiLine" ToolTip="ארוחת בוקר שלי" Width="269px">ארוחת בוקר </asp:TextBox>
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<asp:LinkButton ID="UpdateBreakfastButton" runat="server" BorderStyle="Outset" Height="40px" OnClick="UpdateBreakfastButton_Click" Width="100px">הוסף ארוחת בוקר</asp:LinkButton>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;<asp:LinkButton ID="UpdateBreakfastButton" runat="server" BorderStyle="Outset" Height="40px" OnClick="UpdateBreakfastButton_Click" Width="100px">הוסף ארוחת בוקר</asp:LinkButton>
                 &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;<asp:TextBox ID="datepicker_B" runat="server" BorderStyle="Ridge" ForeColor="Maroon" Height="29px" ToolTip="בחר תאריך " Width="104px">DATE</asp:TextBox>
-&nbsp;<br />&nbsp;
+                &nbsp;<br />&nbsp;
                 <br />
                 &nbsp;&nbsp;<asp:TextBox ID="LunchTextBox" runat="server" ForeColor="#CC0000" Height="76px" TextMode="MultiLine" ToolTip="ארוחת צהריים שלי" Width="270px">ארוחת צהריים</asp:TextBox>
-                &nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;
                 <asp:LinkButton ID="UpdateLunchLinkButton" runat="server" BorderStyle="Outset" ForeColor="#990000" Height="40px" OnClick="UpdateLunchLinkButton_Click" ToolTip="עדכן ארוחת צהריים" Width="100px">עדכן ארוחת צהריים</asp:LinkButton>
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 <asp:TextBox ID="datepicker_L" runat="server" BorderStyle="Ridge" ForeColor="Maroon" Height="29px" ToolTip="בחר תאריך " Width="104px">DATE</asp:TextBox>
                 <br />
                 <br />
 &nbsp;<asp:TextBox ID="DinnerTextBox" runat="server" ForeColor="#006600" Height="76px" TextMode="MultiLine" Width="270px">ארוחת ערב</asp:TextBox>
-                &nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;<asp:TextBox ID="CommentsTextBox" runat="server" ForeColor="Red" Height="75px" TextMode="MultiLine" ToolTip="תוספות והערות" Width="150px">תוספות,נישנושים והערות</asp:TextBox>
+&nbsp;
                 <asp:LinkButton ID="UpdateDinnerLinkButton" runat="server" BorderStyle="Outset" ForeColor="#FF9900" Height="40px" OnClick="UpdateDinnerLinkButton_Click" ToolTip="עדכן ארוחת ערב" Width="100px">עדכן ארוחת ערב</asp:LinkButton>
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 <asp:TextBox ID="datepicker_D" runat="server" BorderStyle="Ridge" ForeColor="Maroon" Height="29px" ToolTip="בחר תאריך " Width="104px">DATE</asp:TextBox>
