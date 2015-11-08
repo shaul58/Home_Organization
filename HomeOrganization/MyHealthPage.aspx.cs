@@ -20,16 +20,8 @@ namespace HomeOrganization
                 logInUserLabel.Text = "ברוך הבא : " + UserName;
             }
             BreakfastTextBox.Focus();
-            //string Breakfast = "", Lunch = "", Dinner = "";
-            string date = DateTime.Now.ToShortDateString();
-            List<string> Food = db.GetFoodFromTable(date);
-            if(Food.Count != 0)
-            {
-                BreakfastTextBox.Text = Food[0];
-                LunchTextBox.Text = Food[1];
-                DinnerTextBox.Text = Food[2];
-            }
-        }
+           
+        } 
 
         protected void HomeLogoButton_Click(object sender, EventArgs e)
         {
@@ -73,16 +65,31 @@ namespace HomeOrganization
             Color myColor = System.Drawing.ColorTranslator.FromHtml(hexColor);
 
             FoodPanel.BackColor = myColor;
+            ShowExsitFoodInTable();
+        }
+
+        private void ShowExsitFoodInTable()
+        {
+            string date = DateTime.Now.ToShortDateString();
+            List<string> Food = db.GetFoodFromTable(date);
+            if (Food.Count != 0)
+            {
+                BreakfastTextBox.Text = Food[0];
+                LunchTextBox.Text = Food[1];
+                DinnerTextBox.Text = Food[2];
+            }
         }
 
         protected void AddAUtoButtonPanel_Click(object sender, EventArgs e)
         {
-            //string DateToday = DateTime.Now.ToShortDateString();
+            string DateToday = DateTime.Now.ToShortDateString();
             string dayToday = DateTime.Now.DayOfWeek.ToString();
+            //string TimeNow = DateTime.Now.AddHours(2).ToShortTimeString();
             string TimeNow = DateTime.Now.ToShortTimeString();
             string KindOfOut = KindOfOut_DropDownList.Text;
             string Escape = EscapeDropDownList.Text;
-            bool sucsess = db.Add_OutlDataToTable('A',DateToday, dayToday, TimeNow, KindOfOut, Escape);
+            string A_Comments = OutCommentsTextBox1.Text;
+            bool sucsess = db.Add_OutlDataToTable('A',DateToday, dayToday, TimeNow, KindOfOut, Escape,A_Comments);
             if (sucsess)
             {
                 AutoPanel.BackColor = Color.GreenYellow;
@@ -103,7 +110,8 @@ namespace HomeOrganization
             string TimeNow = TimeHour_DropDownList.Text + ":" + TimeMinute_DropDownList2.Text;
             string KindOfOut = KindOfOut_DropDownList2.Text;
             string Escape = EscapeDropDownList0.Text;
-            bool sucsess = db.Add_OutlDataToTable('M', DateToday,dayToday, TimeNow, KindOfOut, Escape);
+            string M_Comments = OutCommentsTextBox2.Text;
+            bool sucsess = db.Add_OutlDataToTable('M', DateToday,dayToday, TimeNow, KindOfOut, Escape,M_Comments);
             if(sucsess)
             {
                 // sucsess alert

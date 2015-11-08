@@ -196,18 +196,18 @@ namespace HomeOrganization
             con.Close();
         }
 
-        
-        public bool Add_OutlDataToTable(char F,string DateToday, string dayToday, string TimeNow, string KindOfOut, string Escape)
+
+        public bool Add_OutlDataToTable(char F, string DateToday, string dayToday, string TimeNow, string KindOfOut, string Escape, string Comments)
         {
             string Query = "";
             con.Open();
             if (F == 'A')
-                Query = "INSERT INTO MyHealth_OUTS(Date, Day, Time, KindOfOut, [Escape])" +
-                               "VALUES((SELECT CONVERT(VARCHAR(10), GETDATE(), 103)" +
-                               ",N'" + dayToday + "','" + TimeNow + "',N'" + KindOfOut + "',N'" + Escape + "')";
+                Query = "INSERT INTO MyHealth_OUTS(Date, Day, Time, KindOfOut, [Escape], [Comments])" +
+                               "VALUES((SELECT CONVERT(VARCHAR(10), GETDATE(), 103))" +
+                               ",N'" + dayToday + "','" + TimeNow + "',N'" + KindOfOut + "',N'" + Escape + "',N'" + Comments + "')";
             else if (F == 'M')
-                Query = "INSERT INTO MyHealth_OUTS(Date, Day, Time, KindOfOut, [Escape])" +
-                               "VALUES('" + DateToday + "',N'" + dayToday + "','" + TimeNow + "',N'" + KindOfOut + "',N'" + Escape + "')";
+                Query = "INSERT INTO MyHealth_OUTS(Date, Day, Time, KindOfOut, [Escape], [Comments])" +
+                               "VALUES('" + DateToday + "',N'" + dayToday + "','" + TimeNow + "',N'" + KindOfOut + "',N'" + Escape + "',N'" + Comments + "')";
 
             cmd = new SqlCommand(Query, con);
             cmd.CommandType = CommandType.Text;
@@ -236,7 +236,7 @@ namespace HomeOrganization
                          + "VALUES('" + DateToday + "',N'" + Food + "',' ',' ',N'"+Comments+"')";
             else if (F == 'L')
                 Query = "UPDATE MyHealth_FOOD SET" +
-                       " Lunch = N'" + Food+", , Comments=N'"+Comments+"'"+
+                       " Lunch = N'" + Food +"',Comments=N'"+Comments+"'"+
                        " WHERE Date ='" + DateToday + "'";
             else if (F == 'D')
                 Query = "UPDATE MyHealth_FOOD SET" +

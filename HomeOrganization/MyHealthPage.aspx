@@ -127,7 +127,9 @@
             </div>
             <div class="row">
             <asp:Panel ID="AutoPanel" runat="server" BackColor="#FF6699" Height="100px" Width="1000px" BorderStyle="Outset" Direction="RightToLeft" BorderColor="#FF66CC" Visible="False">
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <br />
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 <asp:DropDownList ID="KindOfOut_DropDownList" runat="server" Width="140px">
                     <asp:ListItem Selected="True" Value="רגיל">רגיל</asp:ListItem>
                     <asp:ListItem Value="שלשול">שלשול</asp:ListItem>
@@ -140,15 +142,17 @@
                     <asp:ListItem Value="ברח קצת">ברח קצת</asp:ListItem>
                     <asp:ListItem Value="ברח הרבה">ברח הרבה</asp:ListItem>
                 </asp:DropDownList>
-                &nbsp;&nbsp;<asp:Button ID="AddAUtoPanelButton" runat="server" CssClass="btn-danger disabled" Height="40px" Text="Update" Width="110px" OnClick="AddAUtoButtonPanel_Click" />
-                &nbsp;</asp:Panel>
+                &nbsp;
+                <asp:TextBox ID="OutCommentsTextBox1" runat="server" BorderStyle="Dotted" ForeColor="#CC0000" TextMode="MultiLine" ToolTip="הכנס הערות"></asp:TextBox>
+                &nbsp; &nbsp;<asp:Button ID="AddAUtoPanelButton" runat="server" CssClass="btn-danger disabled" Height="40px" Text="Update" Width="110px" OnClick="AddAUtoButtonPanel_Click" />
+                &nbsp;&nbsp;&nbsp; &nbsp;</asp:Panel>
         </div>
         <div class="row">
             <asp:Panel ID="MenualPanel" runat="server" BackColor="#FF6600" Height="100px" Width="1000px" BorderStyle="Outset" Direction="RightToLeft" Visible="False">
                 <asp:TextBox ID="datepicker_AutoOUt" runat="server" BorderStyle="Ridge" ForeColor="Maroon" ToolTip="בחר תאריך ">
 בחר תאריך</asp:TextBox>
-                &nbsp;&nbsp;
-                <asp:DropDownList ID="DAYDropDownList" runat="server" CssClass="active">
+                <br />
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<asp:DropDownList ID="DAYDropDownList" runat="server" CssClass="active">
                     <asp:ListItem Value="ראשון">ראשון</asp:ListItem>
                     <asp:ListItem Value="שני">שני</asp:ListItem>
                     <asp:ListItem Value="שלישי">שלישי</asp:ListItem>
@@ -158,7 +162,7 @@
                     <asp:ListItem Value="שבת">שבת</asp:ListItem>
                     <asp:ListItem Selected="True" Value="day">יום</asp:ListItem>
                 </asp:DropDownList>
-                &nbsp;
+&nbsp;
                 <asp:DropDownList ID="TimeMinute_DropDownList2" runat="server" Width="50px">
                     <asp:ListItem>00</asp:ListItem>
                     <asp:ListItem>05</asp:ListItem>
@@ -216,7 +220,9 @@
                     <asp:ListItem Value="ברח הרבה">ברח הרבה</asp:ListItem>
                 </asp:DropDownList>
                 &nbsp;&nbsp;&nbsp;
-                <asp:Button ID="AddMenualPanelButton" runat="server" Text="Update" Width="100px" CssClass="btn-danger disabled" Height="40px" BorderStyle="Solid" OnClick="AddMenualPanelButton_Click" />
+                <asp:TextBox ID="OutCommentsTextBox2" runat="server" BorderStyle="Dotted" ForeColor="Red" TextMode="MultiLine">הכנס הערות</asp:TextBox>
+                &nbsp;
+                <asp:Button ID="AddMenualPanelButton" runat="server" Text="Update" Width="107px" CssClass="btn-danger disabled" Height="40px" BorderStyle="Solid" OnClick="AddMenualPanelButton_Click" />
             </asp:Panel>
         </div>
 

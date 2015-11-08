@@ -94,6 +94,15 @@ namespace HomeOrganization {
         protected global::System.Web.UI.WebControls.DropDownList EscapeDropDownList;
         
         /// <summary>
+        /// OutCommentsTextBox1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox OutCommentsTextBox1;
+        
+        /// <summary>
         /// AddAUtoPanelButton control.
         /// </summary>
         /// <remarks>
@@ -164,6 +173,15 @@ namespace HomeOrganization {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.DropDownList EscapeDropDownList0;
+        
+        /// <summary>
+        /// OutCommentsTextBox2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox OutCommentsTextBox2;
         
         /// <summary>
         /// AddMenualPanelButton control.
