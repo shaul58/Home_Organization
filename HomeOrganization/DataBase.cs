@@ -206,8 +206,9 @@ namespace HomeOrganization
                                "VALUES((SELECT CONVERT(VARCHAR(10), GETDATE(), 103))" +
                                ",N'" + dayToday + "','" + TimeNow + "',N'" + KindOfOut + "',N'" + Escape + "',N'" + Comments + "')";
             else if (F == 'M')
-                Query = "INSERT INTO MyHealth_OUTS(Date, Day, Time, KindOfOut, [Escape], [Comments])" +
-                               "VALUES('" + DateToday + "',N'" + dayToday + "','" + TimeNow + "',N'" + KindOfOut + "',N'" + Escape + "',N'" + Comments + "')";
+                Query = "DECLARE @myDate date = '"+DateToday+"'" +
+            " INSERT INTO MyHealth_OUTS(Date, Day, Time, KindOfOut, [Escape], [Comments])" +
+                               "VALUES((SELECT CONVERT(VARCHAR(10), @myDate, 101)),N'" + dayToday + "','" + TimeNow + "',N'" + KindOfOut + "',N'" + Escape + "',N'" + Comments + "')";
 
             cmd = new SqlCommand(Query, con);
             cmd.CommandType = CommandType.Text;

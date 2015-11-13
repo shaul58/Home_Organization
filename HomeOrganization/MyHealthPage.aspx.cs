@@ -84,8 +84,8 @@ namespace HomeOrganization
         {
             string DateToday = DateTime.Now.ToShortDateString();
             string dayToday = DateTime.Now.DayOfWeek.ToString();
-            //string TimeNow = DateTime.Now.AddHours(2).ToShortTimeString();
-            string TimeNow = DateTime.Now.ToShortTimeString();
+            string TimeNow = DateTime.Now.AddHours(2).ToShortTimeString();
+            //string TimeNow = DateTime.Now.ToShortTimeString();
             string KindOfOut = KindOfOut_DropDownList.Text;
             string Escape = EscapeDropDownList.Text;
             string A_Comments = OutCommentsTextBox1.Text;
@@ -176,6 +176,12 @@ namespace HomeOrganization
                 DinnerTextBox.BackColor = Color.Red;
             }
         }
+
+        
+        //protected void OutCommentsTextBox1_TextChanged(object sender, EventArgs e)
+        //{
+        //    ClientScript.RegisterStartupScript(this.GetType(), "alert", "alert('Insert is successfull')", true);
+        //}
 
         
 

@@ -143,7 +143,7 @@
                     <asp:ListItem Value="ברח הרבה">ברח הרבה</asp:ListItem>
                 </asp:DropDownList>
                 &nbsp;
-                <asp:TextBox ID="OutCommentsTextBox1" runat="server" BorderStyle="Dotted" ForeColor="#CC0000" TextMode="MultiLine" ToolTip="הכנס הערות"></asp:TextBox>
+                <asp:TextBox ID="OutCommentsTextBox1" runat="server" BorderStyle="Dotted" ForeColor="#CC0000" TextMode="MultiLine" ToolTip="הכנס הערות" AutoPostBack="True"></asp:TextBox>
                 &nbsp; &nbsp;<asp:Button ID="AddAUtoPanelButton" runat="server" CssClass="btn-danger disabled" Height="40px" Text="Update" Width="110px" OnClick="AddAUtoButtonPanel_Click" />
                 &nbsp;&nbsp;&nbsp; &nbsp;</asp:Panel>
         </div>
