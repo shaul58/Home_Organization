@@ -67,6 +67,15 @@ namespace HomeOrganization {
         protected global::System.Web.UI.WebControls.Button ShowFoodPanelButton;
         
         /// <summary>
+        /// dayReportButton control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button dayReportButton;
+        
+        /// <summary>
         /// AutoPanel control.
         /// </summary>
         /// <remarks>
@@ -290,5 +299,50 @@ namespace HomeOrganization {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox datepicker_D;
+        
+        /// <summary>
+        /// dayReportPanel control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Panel dayReportPanel;
+        
+        /// <summary>
+        /// dayreportLabel control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label dayreportLabel;
+        
+        /// <summary>
+        /// dayReportDateTextBox control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox dayReportDateTextBox;
+        
+        /// <summary>
+        /// CreateDateReportButton control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button CreateDateReportButton;
+        
+        /// <summary>
+        /// dayReportListBox control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.ListBox dayReportListBox;
     }
 }

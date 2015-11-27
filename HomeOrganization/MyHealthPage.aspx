@@ -4,7 +4,7 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title>My Health page</title>
+    <title>My Health page</title>7
     <link href="main.css" rel="stylesheet" />
 
                 <!-- Jquery is requierd-->
@@ -24,24 +24,29 @@
   <link rel="stylesheet" href="/resources/demos/style.css" />
   <script>
       $(function () {
-          $("#datepicker_AutoOUt").datepicker({ showButtonPanel: true, dateFormat: 'dd-mm-yy' }); //{ dateFormat: 'dd-mm-yy' }
+          $("#datepicker_AutoOUt").datepicker({ showButtonPanel: true, dateFormat: 'dd/mm/yy' }); //{ dateFormat: 'dd-mm-yy' }
       });
   </script>
     <script src="DatePicker_Jquery.js"></script>
     <script>
         $(function () {
-            $("#datepicker_B").datepicker({ showButtonPanel: true, dateFormat: 'dd-mm-yy' }); //{ dateFormat: 'dd-mm-yy' }
+            $("#datepicker_B").datepicker({ showButtonPanel: true, dateFormat: 'dd/mm/yy' }); //{ dateFormat: 'dd-mm-yy' }
         });
   </script>
     <script>
         $(function () {
-            $("#datepicker_L").datepicker({ showButtonPanel: true, dateFormat: 'dd-mm-yy' }); //{ dateFormat: 'dd-mm-yy' }
+            $("#datepicker_L").datepicker({ showButtonPanel: true, dateFormat: 'dd/mm/yy' }); //{ dateFormat: 'dd-mm-yy' }
         });
   </script>
     <script>
         $(function () {
-            $("#datepicker_D").datepicker({ showButtonPanel: true, dateFormat: 'dd-mm-yy' }); //{ dateFormat: 'dd-mm-yy' }
+            $("#datepicker_D").datepicker({ showButtonPanel: true, dateFormat: 'dd/mm/yy' }); //{ dateFormat: 'dd-mm-yy' }
         });
+  </script> 
+  <script>
+      $(function () {
+          $("#dayReportDateTextBox").datepicker({ showButtonPanel: true, dateFormat: 'dd/mm/yy' }); //{ dateFormat: 'dd-mm-yy' }
+      });
   </script>
 
 </head>
@@ -109,11 +114,16 @@
                 <div class="col-sm-4" id="col3" >
                     
                    
-                    <asp:Button ID="ShowAutoPanelButton" runat="server" BackColor="#FFFF99" BorderStyle="Ridge" Height="80px" OnClick="ShowAutoPanelButton_Click" Text="הוספה אוטומטית" Width="100px" />
-&nbsp;&nbsp;&nbsp;&nbsp;
-                    <asp:Button ID="ShowMenualPanelButton" runat="server" BackColor="#FFFF99" BorderStyle="Ridge" Height="80px" OnClick="ShowMenualPanelButton_Click" Text="הוספה ידנית" Width="100px" />
-&nbsp;&nbsp;&nbsp;      
-                    <asp:Button ID="ShowFoodPanelButton" runat="server" BackColor="#FFCC00" BorderStyle="Ridge" Height="80px" OnClick="ShowFoodPanelButton_Click" Text="הוספת ארוחה" Width="100px" />
+                    <asp:Button ID="ShowAutoPanelButton" runat="server" BackColor="#FF6699" BorderStyle="Ridge" Height="80px" OnClick="ShowAutoPanelButton_Click" Text="הוספה אוטומטית" Width="100px" />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;
+                    <asp:Button ID="ShowMenualPanelButton" runat="server" BackColor="#FF6600" BorderStyle="Ridge" Height="80px" OnClick="ShowMenualPanelButton_Click" Text="הוספה ידנית" Width="100px" />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      
+                    <asp:Button ID="ShowFoodPanelButton" runat="server" BackColor="#FFCC99" BorderStyle="Ridge" Height="80px" OnClick="ShowFoodPanelButton_Click" Text="הוספת ארוחה" Width="100px" />
+
+                    
+                   
+                &nbsp;&nbsp;&nbsp;
+                    <asp:Button ID="dayReportButton" runat="server" BackColor="#FFCC00" BorderColor="#000066" BorderStyle="Ridge" ForeColor="Black" Height="80px" OnClick="dayReportButton_Click" Text="דוח יומי" Width="100px" />
 
                     
                    
@@ -247,6 +257,19 @@
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 <asp:TextBox ID="datepicker_D" runat="server" BorderStyle="Ridge" ForeColor="Maroon" Height="29px" ToolTip="בחר תאריך " Width="104px">DATE</asp:TextBox>
             </asp:Panel>
+        </div>
+        <div  class="row">
+            <asp:Panel ID="dayReportPanel" BackColor="Pink" runat="server" Height="287px" Visible="False" Direction="LeftToRight" Font-Bold="True" Width="913px" HorizontalAlign="Right">
+                &nbsp;&nbsp;&nbsp;&nbsp;
+                <asp:Label ID="dayreportLabel" runat="server" Text="דוח יומי של יציאות וארוחות" BorderStyle="Outset" Font-Bold="True" Font-Italic="True" Font-Names="Guttman Yad-Brush" Font-Size="X-Large" Font-Underline="True" ForeColor="Maroon" Height="29px" Width="500px"></asp:Label>
+                &nbsp; בחר תאריך :&nbsp;
+                <asp:TextBox ID="dayReportDateTextBox" runat="server" BorderColor="#0000CC" BorderStyle="Solid" Font-Bold="True" Font-Italic="True" Font-Size="Large" ForeColor="Maroon">DATE</asp:TextBox>
+                &nbsp;<asp:Button ID="CreateDateReportButton" runat="server" Font-Bold="True" Font-Names="Arial Black" Font-Size="Large" ForeColor="Maroon" Height="31px" Text="צור דוח" Width="84px" />
+&nbsp;<br />
+                &nbsp;&nbsp;&nbsp;&nbsp;
+                <asp:ListBox ID="dayReportListBox" runat="server" BackColor="Pink" Font-Names="Guttman Yad-Light" Font-Size="Large" ForeColor="Black" Height="210px" Rows="7" Width="900px" SelectionMode="Multiple"></asp:ListBox>
+            </asp:Panel>
+
         </div>
               
               

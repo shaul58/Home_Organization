@@ -198,17 +198,17 @@ namespace HomeOrganization
 
 
         public bool Add_OutlDataToTable(char F, string DateToday, string dayToday, string TimeNow, string KindOfOut, string Escape, string Comments)
-        {
+         {
             string Query = "";
             con.Open();
             if (F == 'A')
                 Query = "INSERT INTO MyHealth_OUTS(Date, Day, Time, KindOfOut, [Escape], [Comments])" +
-                               "VALUES((SELECT CONVERT(VARCHAR(10), GETDATE(), 103))" +
-                               ",N'" + dayToday + "','" + TimeNow + "',N'" + KindOfOut + "',N'" + Escape + "',N'" + Comments + "')";
+                               "VALUES('" + //(SELECT CONVERT(VARCHAR(10), GETDATE(), 103))
+                              DateToday+ "',N'" + dayToday + "','" + TimeNow + "',N'" + KindOfOut + "',N'" + Escape + "',N'" + Comments + "')";
             else if (F == 'M')
-                Query = "DECLARE @myDate date = '"+DateToday+"'" +
+                Query =            //"DECLARE @myDate date = '"+DateToday+"'" +
             " INSERT INTO MyHealth_OUTS(Date, Day, Time, KindOfOut, [Escape], [Comments])" +
-                               "VALUES((SELECT CONVERT(VARCHAR(10), @myDate, 101)),N'" + dayToday + "','" + TimeNow + "',N'" + KindOfOut + "',N'" + Escape + "',N'" + Comments + "')";
+                               "VALUES('" + DateToday + "',N'" + dayToday + "','" + TimeNow + "',N'" + KindOfOut + "',N'" + Escape + "',N'" + Comments + "')"; //(SELECT CONVERT(VARCHAR(10), @myDate, 103))
 
             cmd = new SqlCommand(Query, con);
             cmd.CommandType = CommandType.Text;
@@ -234,7 +234,7 @@ namespace HomeOrganization
             con.Open();
             if (F == 'B')
                 Query = "INSERT INTO MyHealth_FOOD( Date, Breakfast, Lunch, Dinner, Comments)"
-                         + "VALUES('" + DateToday + "',N'" + Food + "',' ',' ',N'"+Comments+"')";
+                         + "VALUES('" + DateToday + "',N'" + Food + "','  ','  ',N'"+Comments+"')";
             else if (F == 'L')
                 Query = "UPDATE MyHealth_FOOD SET" +
                        " Lunch = N'" + Food +"',Comments=N'"+Comments+"'"+
@@ -268,9 +268,17 @@ namespace HomeOrganization
             {
                 dr.Read();
 
-                Food.Add(dr.GetString(1));
-                Food.Add(dr.GetString(0));
-                Food.Add(dr.GetString(2));
+                try
+                {
+                    Food.Add(dr.GetString(0));
+                    Food.Add(dr.GetString(1));
+                    Food.Add(dr.GetString(2));
+                }
+                catch
+                {
+                    Food.Add("NO Food was inserted");
+                    
+                }
             }
             con.Close();
             return Food;
@@ -278,5 +286,34 @@ namespace HomeOrganization
 
         }
 
+
+
+
+        public List<string> Get_dayReport(string DateReport)
+        {
+            List<string> dayReport = new List<string>();
+            string date="",day="",OutTime="",KindOfOut="",Escape="",Comments="";
+          
+            string Query = "SELECT DISTINCT * from MyHealth_OUTS "+
+                           "WHERE Date='"+ DateReport+"' " +   //26/11/2015
+                           "ORDER BY Date DESC, Time DESC";
+            con.Open();
+            cmd = new SqlCommand(Query, con);
+            cmd.CommandType = CommandType.Text;
+            dr = cmd.ExecuteReader();
+            while (dr.Read())  //dr.HasRows
+            {
+                date = dr.GetString(0);
+                day = dr.GetString(1);
+                OutTime = dr.GetTimeSpan(2).ToString();
+                KindOfOut = dr.GetString(3);
+                Escape = dr.GetString(4);
+                Comments = dr.GetString(5);
+                string record = "Date: " + date + ",day: " + day + "Time: " + OutTime + ",Kind Of Out: " + KindOfOut + ",Escape: " + Escape + ",Comment:  " + Comments + " . :) ";
+                dayReport.Add(record);
+            }
+
+            return dayReport;
+        }
     }
 }

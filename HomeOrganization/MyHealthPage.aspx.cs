@@ -31,6 +31,7 @@ namespace HomeOrganization
         protected void ShowAutoPanelButton_Click(object sender, EventArgs e)
         {
             AutoPanel.Visible = true;
+            dayReportPanel.Visible = false;
             MenualPanel.Visible = false;
             FoodPanel.Visible = false;
             //
@@ -44,6 +45,7 @@ namespace HomeOrganization
         protected void ShowMenualPanelButton_Click(object sender, EventArgs e)
         {
             MenualPanel.Visible = true;
+            dayReportPanel.Visible = false;
             AutoPanel.Visible = false;
             FoodPanel.Visible = false;
            
@@ -57,6 +59,7 @@ namespace HomeOrganization
         protected void ShowFoodPanelButton_Click(object sender, EventArgs e)
         {
             FoodPanel.Visible = true;
+            dayReportPanel.Visible = false;
             AutoPanel.Visible = false;
             MenualPanel.Visible = false;
             //
@@ -74,9 +77,26 @@ namespace HomeOrganization
             List<string> Food = db.GetFoodFromTable(date);
             if (Food.Count != 0)
             {
-                BreakfastTextBox.Text = Food[0];
+                if (Food[0] != " ")
+                {
+                    BreakfastTextBox.Text = Food[0];
+                    BreakfastTextBox.BackColor = Color.Green;
+                }
+                else
+                    BreakfastTextBox.BackColor = Color.Fuchsia;
+                if (Food[1] != " ") { 
                 LunchTextBox.Text = Food[1];
-                DinnerTextBox.Text = Food[2];
+                LunchTextBox.BackColor = Color.Green;
+                }
+                else
+                    LunchTextBox.BackColor = Color.Fuchsia;
+                if (Food[2] != " ")
+                {
+                    DinnerTextBox.Text = Food[2];
+                    DinnerTextBox.BackColor = Color.Green;
+                }
+                else
+                    DinnerTextBox.BackColor = Color.Fuchsia;
             }
         }
 
@@ -175,6 +195,27 @@ namespace HomeOrganization
                 //faild alert
                 DinnerTextBox.BackColor = Color.Red;
             }
+        }
+
+        protected void dayReportButton_Click(object sender, EventArgs e)
+        {
+            List<string> dayReport = new List<string>();
+            string DateReport="";
+            if (dayReportDateTextBox.Text != "" && dayReportDateTextBox.Text != "DATE")    //שנה תאריך ליצירת דוח
+                DateReport = dayReportDateTextBox.Text;
+            else
+                DateReport = DateTime.Now.ToShortDateString();
+            dayReportPanel.Visible = true;
+            FoodPanel.Visible = false;
+            AutoPanel.Visible = false;
+            MenualPanel.Visible = false;
+            
+            dayReport = db.Get_dayReport(DateReport);
+            for (int i = 0; i < dayReport.Count; i++)
+            {
+                dayReportListBox.Items.Add(dayReport[i]);
+            }
+            
         }
 
         
