@@ -218,6 +218,16 @@ namespace HomeOrganization
             
         }
 
+        protected void CreateDateReportButton_Click(object sender, EventArgs e)
+        {
+            List<string> dayReport = new List<string>();
+            dayReport = db.Get_dayReport(dayReportDateTextBox.Text);
+            for (int i = 0; i < dayReport.Count; i++)
+            {
+                dayReportListBox.Items.Add(dayReport[i]);
+            }
+        }
+
         
         //protected void OutCommentsTextBox1_TextChanged(object sender, EventArgs e)
         //{

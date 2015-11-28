@@ -264,7 +264,7 @@
                 <asp:Label ID="dayreportLabel" runat="server" Text="דוח יומי של יציאות וארוחות" BorderStyle="Outset" Font-Bold="True" Font-Italic="True" Font-Names="Guttman Yad-Brush" Font-Size="X-Large" Font-Underline="True" ForeColor="Maroon" Height="29px" Width="500px"></asp:Label>
                 &nbsp; בחר תאריך :&nbsp;
                 <asp:TextBox ID="dayReportDateTextBox" runat="server" BorderColor="#0000CC" BorderStyle="Solid" Font-Bold="True" Font-Italic="True" Font-Size="Large" ForeColor="Maroon">DATE</asp:TextBox>
-                &nbsp;<asp:Button ID="CreateDateReportButton" runat="server" Font-Bold="True" Font-Names="Arial Black" Font-Size="Large" ForeColor="Maroon" Height="31px" Text="צור דוח" Width="84px" />
+                &nbsp;<asp:Button ID="CreateDateReportButton" runat="server" Font-Bold="True" Font-Names="Arial Black" Font-Size="Large" ForeColor="Maroon" Height="31px" Text="צור דוח" Width="84px" OnClick="CreateDateReportButton_Click" />
 &nbsp;<br />
                 &nbsp;&nbsp;&nbsp;&nbsp;
                 <asp:ListBox ID="dayReportListBox" runat="server" BackColor="Pink" Font-Names="Guttman Yad-Light" Font-Size="Large" ForeColor="Black" Height="210px" Rows="7" Width="900px" SelectionMode="Multiple"></asp:ListBox>
