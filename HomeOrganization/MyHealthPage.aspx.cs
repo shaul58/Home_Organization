@@ -211,9 +211,10 @@ namespace HomeOrganization
             MenualPanel.Visible = false;
             
             dayReport = db.Get_dayReport(DateReport);
+            //dayReportListBox.Items.Clear();
             for (int i = 0; i < dayReport.Count; i++)
             {
-                dayReportListBox.Items.Add(dayReport[i]);
+                //dayReportListBox.Items.Add(dayReport[i]);
             }
             
         }
@@ -222,6 +223,7 @@ namespace HomeOrganization
         {
             List<string> dayReport = new List<string>();
             dayReport = db.Get_dayReport(dayReportDateTextBox.Text);
+            dayReportListBox.Items.Clear();
             for (int i = 0; i < dayReport.Count; i++)
             {
                 dayReportListBox.Items.Add(dayReport[i]);

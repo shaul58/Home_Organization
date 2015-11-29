@@ -115,14 +115,14 @@
                     
                    
                     <asp:Button ID="ShowAutoPanelButton" runat="server" BackColor="#FF6699" BorderStyle="Ridge" Height="80px" OnClick="ShowAutoPanelButton_Click" Text="הוספה אוטומטית" Width="100px" />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;
+                    &nbsp;&nbsp;&nbsp;
                     <asp:Button ID="ShowMenualPanelButton" runat="server" BackColor="#FF6600" BorderStyle="Ridge" Height="80px" OnClick="ShowMenualPanelButton_Click" Text="הוספה ידנית" Width="100px" />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      
+                    &nbsp;&nbsp;&nbsp;      
                     <asp:Button ID="ShowFoodPanelButton" runat="server" BackColor="#FFCC99" BorderStyle="Ridge" Height="80px" OnClick="ShowFoodPanelButton_Click" Text="הוספת ארוחה" Width="100px" />
 
                     
                    
-                &nbsp;&nbsp;&nbsp;
+                    &nbsp;&nbsp; &nbsp;
                     <asp:Button ID="dayReportButton" runat="server" BackColor="#FFCC00" BorderColor="#000066" BorderStyle="Ridge" ForeColor="Black" Height="80px" OnClick="dayReportButton_Click" Text="דוח יומי" Width="100px" />
 
                     
@@ -132,11 +132,11 @@
                     
                    
                 </div>
-                <div class="col-sm-4" id="col4" dir="rtl">
+                <%--<div class="col-sm-4" id="col4" dir="rtl">
 
                     &nbsp;&nbsp;
 
-                </div>
+                </div>--%>
             
             </div>
             <div class="row">
@@ -271,7 +271,12 @@
                 &nbsp;<asp:Button ID="CreateDateReportButton" runat="server" Font-Bold="True" Font-Names="Arial Black" Font-Size="Large" ForeColor="Maroon" Height="31px" Text="צור דוח" Width="84px" OnClick="CreateDateReportButton_Click" />
 &nbsp;<br />
                 &nbsp;&nbsp;&nbsp;&nbsp;
-                <asp:ListBox ID="dayReportListBox" runat="server" BackColor="Pink" Font-Names="Guttman Yad-Light" Font-Size="Large" ForeColor="Black" Height="210px" Rows="7" Width="900px" SelectionMode="Multiple"></asp:ListBox>
+                <asp:ListBox ID="dayReportListBox" runat="server" BackColor="Pink" Font-Names="Guttman Yad-Light" Font-Size="Large" ForeColor="Black" Height="210px" Rows="7" Width="900px" SelectionMode="Multiple">
+                    <asp:ListItem>29.11.15</asp:ListItem>
+                    <asp:ListItem>בבית</asp:ListItem>
+                    <asp:ListItem>שלשול</asp:ListItem>
+                    <asp:ListItem>רגיל</asp:ListItem>
+                </asp:ListBox>
             </asp:Panel>
 
         </div>
