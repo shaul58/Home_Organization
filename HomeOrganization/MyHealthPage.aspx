@@ -50,7 +50,7 @@
   </script>
 
 </head>
-<body dir="rtl">
+<body dir="rtl" align="center">
     <form id="form1" runat="server">
     <div class="mycontainer">
             <nav class="navbar navbar-default navbar-fixed-top navbar-inverse" role="navigation">
@@ -106,12 +106,12 @@
             
         <div class="row" id="row3" >
 
-            <div class="col-sm-4" id="col3" >...
+            <div class="col-sm-6" id="col3" >...
                 </div>
-            <div class="col-sm-4" id="col3" >---
-                </div>
+            <%--<div class="col-sm-4" id="col3" >---
+                </div>--%>
             
-                <div class="col-sm-4" id="col3" >
+                <div class="col-sm-6" id="col3" >
                     
                    
                     <asp:Button ID="ShowAutoPanelButton" runat="server" BackColor="#FF6699" BorderStyle="Ridge" Height="80px" OnClick="ShowAutoPanelButton_Click" Text="הוספה אוטומטית" Width="100px" />
@@ -124,6 +124,10 @@
                    
                 &nbsp;&nbsp;&nbsp;
                     <asp:Button ID="dayReportButton" runat="server" BackColor="#FFCC00" BorderColor="#000066" BorderStyle="Ridge" ForeColor="Black" Height="80px" OnClick="dayReportButton_Click" Text="דוח יומי" Width="100px" />
+
+                    
+                   
+                &nbsp;&nbsp;
 
                     
                    
