@@ -98,13 +98,16 @@ namespace HomeOrganization
                 }
                 else
                     DinnerTextBox.BackColor = Color.Red;
-                if (Food[3] != "  ")
+                if (Food[3] != "תוספות,נישנושים והערות")
                 {
                     CommentsTextBox.Text = Food[3];
                     CommentsTextBox.BackColor = Color.GreenYellow;
                 }
                 else
+                {
                     CommentsTextBox.BackColor = Color.Red;
+                    CommentsTextBox.Text = "תוספות,נישנושים והערות";
+                }
             }
             else
             {
