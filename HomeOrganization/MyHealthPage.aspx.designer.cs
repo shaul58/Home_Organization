@@ -238,6 +238,15 @@ namespace HomeOrganization {
         protected global::System.Web.UI.WebControls.TextBox datepicker_B;
         
         /// <summary>
+        /// pickBreakfastDate_ImageButton control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.ImageButton pickBreakfastDate_ImageButton;
+        
+        /// <summary>
         /// LunchTextBox control.
         /// </summary>
         /// <remarks>
@@ -263,6 +272,15 @@ namespace HomeOrganization {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox datepicker_L;
+        
+        /// <summary>
+        /// pickLunchDate_ImageButton control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.ImageButton pickLunchDate_ImageButton;
         
         /// <summary>
         /// DinnerTextBox control.
@@ -299,6 +317,15 @@ namespace HomeOrganization {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox datepicker_D;
+        
+        /// <summary>
+        /// pickDinnerDate_ImageButton control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.ImageButton pickDinnerDate_ImageButton;
         
         /// <summary>
         /// dayReportPanel control.

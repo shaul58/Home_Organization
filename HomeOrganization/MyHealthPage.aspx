@@ -132,7 +132,7 @@
                     
                    
                 </div>
-                <%--<div class="col-sm-4" id="col4" dir="rtl">
+            <%--<div class="col-sm-4" id="col4" dir="rtl">
 
                     &nbsp;&nbsp;
 
@@ -242,16 +242,18 @@
 
         <div class="row">
             <asp:Panel ID="FoodPanel" runat="server" Height="350px" Width="1000px" BorderStyle="Outset" Direction="RightToLeft" BackColor="#FFCC99" BorderColor="#FFCC99" Visible="False">
-                <asp:TextBox ID="BreakfastTextBox" runat="server" ForeColor="Black" Height="76px" TextMode="MultiLine" ToolTip="ארוחת בוקר שלי" Width="269px">ארוחת בוקר </asp:TextBox>
+                <asp:TextBox ID="BreakfastTextBox" runat="server" ForeColor="Black" Height="76px" TextMode="MultiLine" ToolTip="ארוחת בוקר שלי" Width="276px">ארוחת בוקר </asp:TextBox>
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;<asp:LinkButton ID="UpdateBreakfastButton" runat="server" BorderStyle="Outset" Height="40px" OnClick="UpdateBreakfastButton_Click" Width="100px">הוסף ארוחת בוקר</asp:LinkButton>
                 &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;<asp:TextBox ID="datepicker_B" runat="server" BorderStyle="Ridge" ForeColor="Maroon" Height="29px" ToolTip="בחר תאריך " Width="104px">DATE</asp:TextBox>
-                &nbsp;<br />&nbsp;
+                &nbsp;<asp:ImageButton ID="pickBreakfastDate_ImageButton" runat="server" BorderStyle="Ridge" Height="40px" ImageAlign="Middle" ImageUrl="~/gallery/V.png" OnClick="pickBreakfastDate_ImageButton_Click" Width="36px" />
+                <br />&nbsp;
                 <br />
                 &nbsp;&nbsp;<asp:TextBox ID="LunchTextBox" runat="server" ForeColor="#CC0000" Height="76px" TextMode="MultiLine" ToolTip="ארוחת צהריים שלי" Width="270px">ארוחת צהריים</asp:TextBox>
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;
                 <asp:LinkButton ID="UpdateLunchLinkButton" runat="server" BorderStyle="Outset" ForeColor="#990000" Height="40px" OnClick="UpdateLunchLinkButton_Click" ToolTip="עדכן ארוחת צהריים" Width="100px">עדכן ארוחת צהריים</asp:LinkButton>
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 <asp:TextBox ID="datepicker_L" runat="server" BorderStyle="Ridge" ForeColor="Maroon" Height="29px" ToolTip="בחר תאריך " Width="104px">DATE</asp:TextBox>
+                <asp:ImageButton ID="pickLunchDate_ImageButton" runat="server" BorderStyle="Ridge" ImageAlign="Middle" ImageUrl="~/gallery/V.png" OnClick="pickLunchDate_ImageButton_Click" Height="40px" Width="36px" />
                 <br />
                 <br />
 &nbsp;<asp:TextBox ID="DinnerTextBox" runat="server" ForeColor="#006600" Height="76px" TextMode="MultiLine" Width="270px">ארוחת ערב</asp:TextBox>
@@ -260,6 +262,8 @@
                 <asp:LinkButton ID="UpdateDinnerLinkButton" runat="server" BorderStyle="Outset" ForeColor="#FF9900" Height="40px" OnClick="UpdateDinnerLinkButton_Click" ToolTip="עדכן ארוחת ערב" Width="100px">עדכן ארוחת ערב</asp:LinkButton>
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 <asp:TextBox ID="datepicker_D" runat="server" BorderStyle="Ridge" ForeColor="Maroon" Height="29px" ToolTip="בחר תאריך " Width="104px">DATE</asp:TextBox>
+                &nbsp;
+                <asp:ImageButton ID="pickDinnerDate_ImageButton" runat="server" ImageAlign="Middle" ImageUrl="~/gallery/V.png" OnClick="pickDinnerDate_ImageButton_Click" Height="40px" Width="36px" />
             </asp:Panel>
         </div>
         <div  class="row">
@@ -271,11 +275,7 @@
                 &nbsp;<asp:Button ID="CreateDateReportButton" runat="server" Font-Bold="True" Font-Names="Arial Black" Font-Size="Large" ForeColor="Maroon" Height="31px" Text="צור דוח" Width="84px" OnClick="CreateDateReportButton_Click" />
 &nbsp;<br />
                 &nbsp;&nbsp;&nbsp;&nbsp;
-                <asp:ListBox ID="dayReportListBox" runat="server" BackColor="Pink" Font-Names="Guttman Yad-Light" Font-Size="Large" ForeColor="Black" Height="210px" Rows="7" Width="900px" SelectionMode="Multiple">
-                    <asp:ListItem>29.11.15</asp:ListItem>
-                    <asp:ListItem>בבית</asp:ListItem>
-                    <asp:ListItem>שלשול</asp:ListItem>
-                    <asp:ListItem>רגיל</asp:ListItem>
+                <asp:ListBox ID="dayReportListBox" runat="server" BackColor="Pink" Font-Names="Guttman Yad-Light" Font-Size="Large" ForeColor="Black" Height="210px" Rows="7" Width="900px" CssClass="active">
                 </asp:ListBox>
             </asp:Panel>
 

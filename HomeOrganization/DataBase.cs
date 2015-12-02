@@ -203,8 +203,8 @@ namespace HomeOrganization
             con.Open();
             if (F == 'A')
                 Query = "INSERT INTO MyHealth_OUTS(Date, Day, Time, KindOfOut, [Escape], [Comments])" +
-                               "VALUES('" + //(SELECT CONVERT(VARCHAR(10), GETDATE(), 103))
-                              DateToday+ "',N'" + dayToday + "','" + TimeNow + "',N'" + KindOfOut + "',N'" + Escape + "',N'" + Comments + "')";
+                               "VALUES( (SELECT CONVERT(VARCHAR(10), GETDATE(), 103))" +
+                              /*DateToday*/",N'" + dayToday + "','" + TimeNow + "',N'" + KindOfOut + "',N'" + Escape + "',N'" + Comments + "')";
             else if (F == 'M')
                 Query =            //"DECLARE @myDate date = '"+DateToday+"'" +
             " INSERT INTO MyHealth_OUTS(Date, Day, Time, KindOfOut, [Escape], [Comments])" +
@@ -258,9 +258,13 @@ namespace HomeOrganization
         public List<string> GetFoodFromTable(string date)
         {
             List<string> Food = new List<string>();
-            string Query = " SELECT Breakfast, Lunch, Dinner from MyHealth_FOOD"+
+            string Query = " SELECT Breakfast, Lunch, Dinner, Comments from MyHealth_FOOD" +
                            " WHERE Date = '"+ date+"'";
-            con.Open();
+            try
+            {
+                con.Open();
+            }
+            catch {  }
             cmd = new SqlCommand(Query, con);
             cmd.CommandType = CommandType.Text;
             dr = cmd.ExecuteReader();
@@ -273,6 +277,7 @@ namespace HomeOrganization
                     Food.Add(dr.GetString(0));
                     Food.Add(dr.GetString(1));
                     Food.Add(dr.GetString(2));
+                    Food.Add(dr.GetString(3));
                 }
                 catch
                 {
@@ -309,8 +314,10 @@ namespace HomeOrganization
                 KindOfOut = dr.GetString(3);
                 Escape = dr.GetString(4);
                 Comments = dr.GetString(5);
-                string record = "Date: " + date + ",day: " + day + "Time: " + OutTime + ",Kind Of Out: " + KindOfOut + ",Escape: " + Escape + ",Comment:  " + Comments + " . :) ";
+                string record = "Date: " + date + " ,day: " + day + " ,Time: " + OutTime + " ,Kind Of Out: " + KindOfOut + " ,Escape: " + Escape + " ,Comment:  " + Comments + "  :) ";
+                string space =  "                                                                                                                                                    ";
                 dayReport.Add(record);
+                dayReport.Add(space);
             }
 
             return dayReport;

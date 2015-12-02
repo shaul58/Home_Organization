@@ -94,6 +94,7 @@
     <Content Include="gallery\thmb1.jpg" />
     <Content Include="gallery\thmb2.jpg" />
     <Content Include="gallery\thmb3.jpg" />
+    <Content Include="gallery\V.png" />
     <Content Include="js\bootstrap.js" />
     <Content Include="js\bootstrap.min.js" />
     <Content Include="js\carousel.js" />
