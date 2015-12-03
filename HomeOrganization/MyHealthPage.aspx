@@ -257,7 +257,7 @@
                 <br />
                 <br />
 &nbsp;<asp:TextBox ID="DinnerTextBox" runat="server" ForeColor="#006600" Height="76px" TextMode="MultiLine" Width="270px">ארוחת ערב</asp:TextBox>
-                &nbsp;&nbsp;<asp:TextBox ID="CommentsTextBox" runat="server" ForeColor="Red" Height="75px" TextMode="MultiLine" ToolTip="תוספות והערות" Width="150px">תוספות,נישנושים והערות</asp:TextBox>
+                &nbsp;&nbsp;<asp:TextBox ID="CommentsTextBox" runat="server" ForeColor="Black" Height="75px" TextMode="MultiLine" ToolTip="תוספות והערות" Width="150px">תוספות,נישנושים והערות</asp:TextBox>
 &nbsp;
                 <asp:LinkButton ID="UpdateDinnerLinkButton" runat="server" BorderStyle="Outset" ForeColor="#FF9900" Height="40px" OnClick="UpdateDinnerLinkButton_Click" ToolTip="עדכן ארוחת ערב" Width="100px">עדכן ארוחת ערב</asp:LinkButton>
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -277,7 +277,7 @@
                 &nbsp;&nbsp;&nbsp;&nbsp;
                 <asp:ListBox ID="dayReportListBox" runat="server" BackColor="Pink" Font-Names="Guttman Yad-Light" Font-Size="Large" ForeColor="Black" Height="210px" Rows="7" Width="900px" CssClass="active">
                 </asp:ListBox>
-            </asp:Panel>
+                kjkjkjkjkjk</asp:Panel>
 
         </div>
               

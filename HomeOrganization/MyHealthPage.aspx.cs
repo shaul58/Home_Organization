@@ -77,7 +77,7 @@ namespace HomeOrganization
             List<string> Food = db.GetFoodFromTable(date);
             if (Food.Count != 0)
             {
-                if (Food[0] != " ")
+                if (Food[0] != "  ")
                 {
                     BreakfastTextBox.Text = Food[0];
                     BreakfastTextBox.BackColor = Color.GreenYellow;
@@ -98,7 +98,7 @@ namespace HomeOrganization
                 }
                 else
                     DinnerTextBox.BackColor = Color.Red;
-                if (Food[3] != "תוספות,נישנושים והערות")
+                if (Food[3] != " ")
                 {
                     CommentsTextBox.Text = Food[3];
                     CommentsTextBox.BackColor = Color.GreenYellow;
@@ -117,6 +117,9 @@ namespace HomeOrganization
                 LunchTextBox.Text = "ארוחת צהרים";
                 DinnerTextBox.BackColor = Color.Gray;
                 DinnerTextBox.Text = "ארוחת ערב";
+                CommentsTextBox.BackColor = Color.Gray;
+                CommentsTextBox.Text = "הערות ותוספות";
+
 
             }
         }
@@ -371,6 +374,7 @@ namespace HomeOrganization
                 CommentsTextBox.Text = "מלא הערות";
             }
         }
+        }
 
     }
-}
+
